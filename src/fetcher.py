@@ -50,7 +50,7 @@ def fetch_media(ig_user_id: str, access_token: str, limit: int = 50) -> list[dic
 
 
 def fetch_all(access_token: str) -> dict:
-    ig_user_id = get_ig_user_id(access_token)
+    ig_user_id = os.environ.get("IG_USER_ID") or get_ig_user_id(access_token)
     media = fetch_media(ig_user_id, access_token)
     insights = fetch_account_insights(ig_user_id, access_token)
 
