@@ -15,27 +15,30 @@ def _headers(token: str) -> dict:
     }
 
 
+def _t(text: str, limit: int = 1990) -> str:
+    return text[:limit] if len(text) > limit else text
+
+
 def _markdown_to_blocks(text: str) -> list[dict]:
-    """Convert markdown text to Notion block objects."""
     blocks = []
     for line in text.split("\n"):
         if line.startswith("## "):
             blocks.append({
                 "object": "block",
                 "type": "heading_2",
-                "heading_2": {"rich_text": [{"type": "text", "text": {"content": line[3:]}}]},
+                "heading_2": {"rich_text": [{"type": "text", "text": {"content": _t(line[3:])}}]},
             })
         elif line.startswith("# "):
             blocks.append({
                 "object": "block",
                 "type": "heading_1",
-                "heading_1": {"rich_text": [{"type": "text", "text": {"content": line[2:]}}]},
+                "heading_1": {"rich_text": [{"type": "text", "text": {"content": _t(line[2:])}}]},
             })
         elif line.startswith("- "):
             blocks.append({
                 "object": "block",
                 "type": "bulleted_list_item",
-                "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": line[2:]}}]},
+                "bulleted_list_item": {"rich_text": [{"type": "text", "text": {"content": _t(line[2:])}}]},
             })
         elif line.strip() == "":
             blocks.append({"object": "block", "type": "paragraph", "paragraph": {"rich_text": []}})
@@ -43,9 +46,8 @@ def _markdown_to_blocks(text: str) -> list[dict]:
             blocks.append({
                 "object": "block",
                 "type": "paragraph",
-                "paragraph": {"rich_text": [{"type": "text", "text": {"content": line}}]},
+                "paragraph": {"rich_text": [{"type": "text", "text": {"content": _t(line)}}]},
             })
-    # Notion allows max 100 blocks per request — chunk if needed
     return blocks[:100]
 
 
@@ -82,6 +84,8 @@ def create_report_page(notion_token: str, parent_page_id: str, analysis: str, da
         json=payload,
         timeout=30,
     )
+    if not resp.ok:
+        print(f"Notion error {resp.status_code}: {resp.text[:500]}")
     resp.raise_for_status()
     page = resp.json()
     return page["url"]
