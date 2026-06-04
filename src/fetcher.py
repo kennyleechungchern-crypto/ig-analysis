@@ -40,7 +40,7 @@ def fetch_account_insights(ig_user_id: str, access_token: str) -> dict:
 def fetch_media(ig_user_id: str, access_token: str, limit: int = 50) -> list[dict]:
     fields = (
         "id,caption,media_type,timestamp,like_count,comments_count,"
-        "reach,impressions,saved,video_views,plays,thumbnail_url,media_url,permalink"
+        "media_url,permalink,thumbnail_url"
     )
     data = _get(
         f"{ig_user_id}/media",
