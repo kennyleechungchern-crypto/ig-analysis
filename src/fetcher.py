@@ -52,7 +52,6 @@ def fetch_media(ig_user_id: str, access_token: str, limit: int = 50) -> list[dic
 def fetch_all(access_token: str) -> dict:
     ig_user_id = os.environ.get("IG_USER_ID") or get_ig_user_id(access_token)
     media = fetch_media(ig_user_id, access_token)
-    insights = fetch_account_insights(ig_user_id, access_token)
 
     posts = [m for m in media if m.get("media_type") in ("IMAGE", "CAROUSEL_ALBUM")]
     reels = [m for m in media if m.get("media_type") == "VIDEO"]
@@ -60,7 +59,6 @@ def fetch_all(access_token: str) -> dict:
     return {
         "fetched_at": datetime.utcnow().isoformat(),
         "ig_user_id": ig_user_id,
-        "account_insights": insights,
         "posts": posts,
         "reels": reels,
         "total_media": len(media),
