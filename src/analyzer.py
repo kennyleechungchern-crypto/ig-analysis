@@ -4,13 +4,11 @@ import anthropic
 import requests as http_requests
 
 
-def _image_to_base64(url: str) -> tuple[str, str] | None:
+def _image_to_base64(url: str) -> str | None:
     try:
         resp = http_requests.get(url, timeout=15)
         resp.raise_for_status()
-        media_type = resp.headers.get("content-type", "image/jpeg").split(";")[0].strip()
-        data = base64.standard_b64encode(resp.content).decode("utf-8")
-        return data, media_type
+        return base64.standard_b64encode(resp.content).decode("utf-8")
     except Exception:
         return None
 
@@ -112,12 +110,11 @@ def analyze(data: dict) -> str:
         for child in children:
             url = child.get("media_url")
             if url:
-                result = _image_to_base64(url)
-                if result:
-                    b64_data, media_type = result
+                b64_data = _image_to_base64(url)
+                if b64_data:
                     content.append({
                         "type": "image",
-                        "source": {"type": "base64", "media_type": media_type, "data": b64_data},
+                        "source": {"type": "base64", "media_type": "image/jpeg", "data": b64_data},
                     })
 
     message = client.messages.create(
