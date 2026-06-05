@@ -1,5 +1,18 @@
+import base64
 import json
 import anthropic
+import requests as http_requests
+
+
+def _image_to_base64(url: str) -> tuple[str, str] | None:
+    try:
+        resp = http_requests.get(url, timeout=15)
+        resp.raise_for_status()
+        media_type = resp.headers.get("content-type", "image/jpeg").split(";")[0].strip()
+        data = base64.standard_b64encode(resp.content).decode("utf-8")
+        return data, media_type
+    except Exception:
+        return None
 
 
 ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 Instagram 账号近期的数据，请进行全面分析并给出可操作的建议。
@@ -99,10 +112,13 @@ def analyze(data: dict) -> str:
         for child in children:
             url = child.get("media_url")
             if url:
-                content.append({
-                    "type": "image",
-                    "source": {"type": "url", "url": url},
-                })
+                result = _image_to_base64(url)
+                if result:
+                    b64_data, media_type = result
+                    content.append({
+                        "type": "image",
+                        "source": {"type": "base64", "media_type": media_type, "data": b64_data},
+                    })
 
     message = client.messages.create(
         model="claude-opus-4-8",
