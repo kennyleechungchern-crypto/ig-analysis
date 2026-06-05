@@ -27,7 +27,9 @@ ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 I
 数据如下：
 {data_json}
 
-注意：Carousel 贴文的每张图片已附在此消息中（标注了对应贴文的发布日期与按讚数），请结合图片视觉内容进行分析。
+注意：
+- Carousel 贴文的每张图片已附在此消息中（标注了对应贴文的发布日期与按讚数），请结合图片视觉内容进行分析。
+- 高互动 Reels 的封面缩略图也已附上，请分析封面的视觉吸引力与钩子设计。
 
 请分析以下维度，用繁体中文输出：
 
@@ -50,6 +52,11 @@ ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 I
 - 播放量与互动率对比
 - 表现最好的 Reels 及成功因素
 - Reels 相比 Posts 的表现差异
+
+## 3a. Reels 封面视觉分析
+- 高互动 Reels 封面的构图、文字、表情/人物呈现规律
+- 封面是否有清晰的钩子（标题文字、强烈表情、反差画面）
+- 与低互动 Reels 封面的对比差异
 
 ## 4. 内容主题洞察
 - 哪类内容最受欢迎
@@ -135,6 +142,38 @@ def analyze(data: dict) -> str:
         })
         content.extend(image_blocks)
         print(f"  [vision] carousel {date_str}: {len(image_blocks)} images attached")
+
+    # Reels thumbnail analysis — top 8 by likes
+    top_reels = sorted(
+        [r for r in data.get("reels", []) if r.get("thumbnail_url")],
+        key=lambda r: r.get("like_count", 0),
+        reverse=True,
+    )[:8]
+
+    reel_thumb_blocks = []
+    for reel in top_reels:
+        url = reel.get("thumbnail_url")
+        b64_data = _image_to_base64(url)
+        if not b64_data:
+            continue
+        date_str = (reel.get("timestamp") or "")[:10]
+        likes = reel.get("like_count", 0)
+        reel_thumb_blocks.append({
+            "type": "text",
+            "text": f"\n--- Reel 封面 {date_str}（{likes} 讚）---",
+        })
+        reel_thumb_blocks.append({
+            "type": "image",
+            "source": {"type": "base64", "media_type": "image/jpeg", "data": b64_data},
+        })
+        print(f"  [vision] reel thumbnail {date_str}: {likes} likes")
+
+    if reel_thumb_blocks:
+        content.append({
+            "type": "text",
+            "text": "\n\n=== 以下为 Top 8 Reels 封面缩略图 ===",
+        })
+        content.extend(reel_thumb_blocks)
 
     message = client.messages.create(
         model="claude-opus-4-8",
