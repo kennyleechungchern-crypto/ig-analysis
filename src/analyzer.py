@@ -7,6 +7,8 @@ ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 I
 数据如下：
 {data_json}
 
+注意：Carousel 贴文的每张图片已附在此消息中（标注了对应贴文的发布日期与按讚数），请结合图片视觉内容进行分析。
+
 请分析以下维度，用繁体中文输出：
 
 ## 1. 整体表现摘要
@@ -18,6 +20,11 @@ ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 I
 - 表现最好的前 3 篇及原因
 - 表现最差的前 3 篇及原因
 - 最佳发布时间段
+
+## 2a. Carousel 视觉内容分析
+- 高互动 Carousel 的排版风格、字体、配色规律
+- 封面图（第一张）的钩子设计
+- 内容结构（起承转合）是否清晰
 
 ## 3. Reels 分析
 - 播放量与互动率对比
@@ -50,6 +57,7 @@ def analyze(data: dict) -> str:
                 "comments_count": p.get("comments_count", 0),
                 "reach": p.get("reach", 0),
                 "saved": p.get("saved", 0),
+                "carousel_slides": len(p.get("children", [])) if p.get("media_type") == "CAROUSEL_ALBUM" else None,
             }
             for p in data.get("posts", [])
         ],
@@ -69,15 +77,37 @@ def analyze(data: dict) -> str:
         "total_reels": len(data.get("reels", [])),
     }
 
+    content = [
+        {
+            "type": "text",
+            "text": ANALYSIS_PROMPT.format(data_json=json.dumps(compact, ensure_ascii=False, indent=2)),
+        }
+    ]
+
+    for post in data.get("posts", []):
+        if post.get("media_type") != "CAROUSEL_ALBUM":
+            continue
+        children = post.get("children", [])
+        if not children:
+            continue
+        date_str = (post.get("timestamp") or "")[:10]
+        likes = post.get("like_count", 0)
+        content.append({
+            "type": "text",
+            "text": f"\n--- Carousel {date_str}（{likes} 讚，{len(children)} 张图）---",
+        })
+        for child in children:
+            url = child.get("media_url")
+            if url:
+                content.append({
+                    "type": "image",
+                    "source": {"type": "url", "url": url},
+                })
+
     message = client.messages.create(
         model="claude-opus-4-8",
         max_tokens=4096,
         system="你是专业的社交媒体策略顾问，擅长 Instagram 数据分析，输出繁体中文报告。",
-        messages=[
-            {
-                "role": "user",
-                "content": ANALYSIS_PROMPT.format(data_json=json.dumps(compact, ensure_ascii=False, indent=2)),
-            }
-        ],
+        messages=[{"role": "user", "content": content}],
     )
     return message.content[0].text

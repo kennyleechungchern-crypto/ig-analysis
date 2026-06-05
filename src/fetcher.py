@@ -49,12 +49,24 @@ def fetch_media(ig_user_id: str, access_token: str, limit: int = 50) -> list[dic
     return data.get("data", [])
 
 
+def fetch_carousel_children(media_id: str, access_token: str) -> list[dict]:
+    data = _get(
+        f"{media_id}/children",
+        {"access_token": access_token, "fields": "id,media_type,media_url"},
+    )
+    return data.get("data", [])
+
+
 def fetch_all(access_token: str) -> dict:
     ig_user_id = os.environ.get("IG_USER_ID") or get_ig_user_id(access_token)
     media = fetch_media(ig_user_id, access_token)
 
     posts = [m for m in media if m.get("media_type") in ("IMAGE", "CAROUSEL_ALBUM")]
     reels = [m for m in media if m.get("media_type") == "VIDEO"]
+
+    for post in posts:
+        if post.get("media_type") == "CAROUSEL_ALBUM":
+            post["children"] = fetch_carousel_children(post["id"], access_token)
 
     return {
         "fetched_at": datetime.utcnow().isoformat(),
