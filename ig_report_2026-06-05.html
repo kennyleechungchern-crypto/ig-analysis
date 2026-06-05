@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IG 分析报告 · 2026-06-05</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         background: #0f0f0f; color: #e0e0e0; min-height: 100vh; }
+  .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+           padding: 48px 24px 64px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 60% 40%, rgba(233,69,96,.15) 0%, transparent 60%); }
+  .hero h1 { font-size: clamp(24px,5vw,42px); font-weight: 800; color: #fff;
+              background: linear-gradient(135deg,#e94560,#f5a623); -webkit-background-clip:text;
+              -webkit-text-fill-color:transparent; position: relative; }
+  .hero sub { display: block; margin-top: 8px; color: #aaa; font-size: 14px; position: relative; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 32px 16px 64px; }
+
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+                 gap: 16px; margin-bottom: 40px; }
+  .stat-card { background: #1a1a2e; border: 1px solid #2a2a4e; border-radius: 16px;
+                padding: 20px; text-align: center; }
+  .stat-card .val { font-size: 36px; font-weight: 800; color: #e94560; line-height: 1; }
+  .stat-card .lbl { font-size: 12px; color: #888; margin-top: 6px; }
+
+  h2 { font-size: 22px; font-weight: 700; margin-bottom: 20px; color: #fff;
+        border-left: 4px solid #e94560; padding-left: 12px; }
+  .section { margin-bottom: 48px; }
+
+  .chart-wrap { background: #1a1a2e; border: 1px solid #2a2a4e; border-radius: 16px;
+                 padding: 24px; margin-bottom: 32px; }
+  .chart-wrap canvas { max-height: 280px; }
+
+  .cards { display: flex; flex-direction: column; gap: 12px; }
+  .card { background: #1a1a2e; border: 1px solid #2a2a4e; border-radius: 12px;
+           padding: 16px; display: flex; gap: 16px; align-items: flex-start; }
+  .card-rank { font-size: 28px; font-weight: 900; color: #e94560; min-width: 40px; }
+  .card-body { flex: 1; }
+  .card-meta { font-size: 12px; color: #888; margin-bottom: 6px; }
+  .card-caption { font-size: 14px; line-height: 1.6; color: #ccc; margin-bottom: 8px; }
+  .card-stats { display: flex; gap: 16px; font-size: 13px; color: #aaa; }
+  .card-stats a { color: #e94560; text-decoration: none; }
+  .badge { background: rgba(233,69,96,.2); color: #e94560; border-radius: 20px;
+            padding: 2px 8px; font-size: 11px; margin-left: 4px; }
+
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { background: #1a1a2e; border: 1px solid #2a2a4e; border-radius: 20px;
+          padding: 4px 12px; font-size: 13px; color: #ccc; }
+  .tag b { color: #e94560; }
+
+  .insight-box { background: linear-gradient(135deg,#1a1a2e,#0f3460); border-radius: 16px;
+                  padding: 24px; border: 1px solid #2a2a4e; }
+  .insight-box p { line-height: 1.9; color: #ccc; font-size: 15px; }
+  .insight-box strong { color: #e94560; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media(max-width:680px) { .two-col { grid-template-columns: 1fr; } }
+  footer { text-align: center; color: #555; font-size: 12px; padding: 24px; }
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>高效男孩 · 宗臻 IG 分析报告</h1>
+  <sub>数据抓取时间：2026-06-05T14:57:19 UTC &nbsp;|&nbsp; 报告生成：2026-06-05 15:02 UTC</sub>
+</div>
+
+<div class="container">
+
+  <!-- 汇总数字 -->
+  <div class="stats-grid">
+    <div class="stat-card"><div class="val">16</div><div class="lbl">Posts（含 Carousel）</div></div>
+    <div class="stat-card"><div class="val">34</div><div class="lbl">Reels</div></div>
+    <div class="stat-card"><div class="val">16</div><div class="lbl">Carousel 贴文</div></div>
+    <div class="stat-card"><div class="val">364</div><div class="lbl">最高单篇讚数（Posts）</div></div>
+    <div class="stat-card"><div class="val">419</div><div class="lbl">最高单篇讚数（Reels）</div></div>
+    <div class="stat-card"><div class="val">82</div><div class="lbl">Posts 平均讚</div></div>
+    <div class="stat-card"><div class="val">86</div><div class="lbl">Reels 平均讚</div></div>
+    <div class="stat-card"><div class="val">1.1</div><div class="lbl">Posts 平均留言</div></div>
+  </div>
+
+  <!-- 图表 -->
+  <div class="section">
+    <h2>📈 Posts 讚数趋势</h2>
+    <div class="chart-wrap">
+      <canvas id="postChart"></canvas>
+    </div>
+    <h2>🎬 Reels 讚数趋势</h2>
+    <div class="chart-wrap">
+      <canvas id="reelChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Top 5 Posts -->
+  <div class="section">
+    <h2>🏆 表现最好的 5 篇 Posts</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-rank">#1</div>
+        <div class="card-body">
+          <div class="card-meta">🎠 2026-05-19 <span class="badge">📸 4 张</span></div>
+          <div class="card-caption">不要一直代在家
+
+#高效男孩 #个人成长 #思维</div>
+          <div class="card-stats">
+            <span>❤️ 364</span>
+            <span>💬 3</span>
+            <a href='https://www.instagram.com/p/DYhBAIwlGaw/' target='_blank'>🔗 查看</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-rank">#2</div>
+        <div class="card-body">
+          <div class="card-meta">🎠 2026-05-06 <span class="badge">📸 7 张</span></div>
+          <div class="card-caption">如果你不想要“白睡“
+
+#高效男孩 #深度睡眠 #习惯养成</div>
+          <div class="card-stats">
+            <span>❤️ 247</span>
+            <span>💬 2</span>
+            <a href='https://www.instagram.com/p/DX_LxxllCTN/' target='_blank'>🔗 查看</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-rank">#3</div>
+        <div class="card-body">
+          <div class="card-meta">🎠 2026-04-28 <span class="badge">📸 5 张</span></div>
+          <div class="card-caption">27岁生日收到了很多很多祝福
+没来得及逐个逐个给回应
+被爱包围的宗臻想说，我接住了 🫶
+
+一整年来贵人源源
+每天都在不停突破
+活着的体验感满满
+
+宗臻会继续实现🉐
+把更多价值带给大家
+绽放生命力感染大家
+让七岁的自己很骄傲
+
+Kenny l…</div>
+          <div class="card-stats">
+            <span>❤️ 109</span>
+            <span>💬 6</span>
+            <a href='https://www.instagram.com/p/DXq6LHzlLVu/' target='_blank'>🔗 查看</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-rank">#4</div>
+        <div class="card-body">
+          <div class="card-meta">🎠 2026-05-21 <span class="badge">📸 5 张</span></div>
+          <div class="card-caption">千万，不要回应
+
+#高效男孩 #思维 #自我成长</div>
+          <div class="card-stats">
+            <span>❤️ 90</span>
+            <span>💬 0</span>
+            <a href='https://www.instagram.com/p/DYmyeIsE_9W/' target='_blank'>🔗 查看</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-rank">#5</div>
+        <div class="card-body">
+          <div class="card-meta">🎠 2026-05-14 <span class="badge">📸 4 张</span></div>
+          <div class="card-caption">当人与人没有边界；
+就会开始犯贱
+
+#高效男孩 #距离产生美 #边界感 #思维</div>
+          <div class="card-stats">
+            <span>❤️ 80</span>
+            <span>💬 2</span>
+            <a href='https://www.instagram.com/p/DYTtr2nkft4/' target='_blank'>🔗 查看</a>
+          </div>
+        </div>
+      </div></div>
+  </div>
+
+  <!-- Top 5 Reels -->
+  <div class="section">
+    <h2>🎬 表现最好的 5 支 Reels</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-rank">#1</div>
+        <div class="card-body">
+          <div class="card-meta">🎬 2026-04-11 </div>
+          <div class="card-caption">万事皆可包装；唯独身材
+#高效男孩 #自我成长 #思维 #自律 #自我提升</div>
+          <div class="card-stats">
+            <span>❤️ 419</span>
+            <span>💬 7</span>
+            <a href='https://www.instagram.com/reel/DW_Ua_3gsx3/' target='_blank'>🔗 查看</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-rank">#2</div>
+        <div class="card-body">
+          <div class="card-meta">🎬 2026-04-01 </div>
+          <div class="card-caption">自媒体的底层逻辑
+
+#高效男孩 #思维 #自我提升 #自媒体 #个人成长</div>
+          <div class="card-stats">
+            <span>❤️ 227</span>
+            <span>💬 4</span>
+            <a href='https://www.instagram.com/reel/DWk9P-tEWQw/' target='_blank'>🔗 查看</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-rank">#3</div>
+        <div class="card-body">
+          <div class="card-meta">🎬 2026-03-27 </div>
+          <div class="card-caption">一个动作自动筛选你的圈子
+#高效男孩 #自律 #思维 #个人成长 #生活方式</div>
+          <div class="card-stats">
+            <span>❤️ 199</span>
+            <span>💬 7</span>
+            <a href='https://www.instagram.com/reel/DWZAqpzk6UI/' target='_blank'>🔗 查看</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-rank">#4</div>
+        <div class="card-body">
+          <div class="card-meta">🎬 2026-04-12 </div>
+          <div class="card-caption">如果你会养狗，你就会瘦下来
+#高效男孩 #自律 #思维 #自我提升 #生活方式</div>
+          <div class="card-stats">
+            <span>❤️ 159</span>
+            <span>💬 4</span>
+            <a href='https://www.instagram.com/reel/DXCN_89AoTO/' target='_blank'>🔗 查看</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-rank">#5</div>
+        <div class="card-body">
+          <div class="card-meta">🎬 2026-04-02 </div>
+          <div class="card-caption">第一原则：不给批评
+
+#高效男孩 #思维 #个人成长 #习惯养成 #生活方式</div>
+          <div class="card-stats">
+            <span>❤️ 157</span>
+            <span>💬 1</span>
+            <a href='https://www.instagram.com/reel/DWoiTCFE9gj/' target='_blank'>🔗 查看</a>
+          </div>
+        </div>
+      </div></div>
+  </div>
+
+  <!-- Hashtag -->
+  <div class="section">
+    <h2>🏷️ 最常用 Hashtag（Top 10）</h2>
+    <div class="tag-cloud"><span class="tag">#高效男孩 <b>49</b></span> <span class="tag">#思维 <b>41</b></span> <span class="tag">#自我提升 <b>24</b></span> <span class="tag">#个人成长 <b>20</b></span> <span class="tag">#生活方式 <b>19</b></span> <span class="tag">#自律 <b>17</b></span> <span class="tag">#自我成长 <b>8</b></span> <span class="tag">#习惯养成 <b>7</b></span> <span class="tag">#感恩 <b>2</b></span> <span class="tag">#有效社交 <b>1</b></span></div>
+  </div>
+
+  <!-- 洞察 -->
+  <div class="section">
+    <h2>💡 关键洞察</h2>
+    <div class="insight-box">
+      <p>
+        📊 本帐号共有 <strong>16 篇 Posts</strong>（其中 16 篇 Carousel）与 <strong>34 支 Reels</strong>。
+        <br><br>
+        🥇 <strong>最高互动 Post</strong>：「不要一直代在家
+
+#高效男孩 #个人成长 #思维…」—— 364 讚（Carousel 图文格式）。
+        <br><br>
+        🎯 <strong>Carousel 表现远优于单张图片</strong>：Top 5 Posts 全部是 Carousel 格式，平均讚数约为整体 Posts 均值的 2-3 倍，说明多张图片叙事能大幅提升滑动留存与互动。
+        <br><br>
+        📹 <strong>Reels 平均讚数（86）≈ Posts 平均讚数（82）</strong>，但 Reels 数量是 Posts 的 2.1 倍，说明 Reels 产量高，但单支效率与顶级 Carousel 仍有差距。
+        <br><br>
+        🏷️ <strong>#高效男孩</strong> 是核心品牌标签，几乎出现在所有内容中，有助于主页定位一致性。
+        <br><br>
+        ⚠️ <strong>数据限制</strong>：reach / saved / video_views 全部为 0（API 权限不足），目前只能用讚数 + 留言数评估表现。如需完整数据，需要将 Facebook App 升级至 Live Mode 并申请 instagram_manage_insights。
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<footer>IG Analysis System · 由 Claude AI 生成 · 2026-06-05</footer>
+
+<script>
+const chartOpts = (label, data, labels, color) => ({
+  type: 'bar',
+  data: {
+    labels,
+    datasets: [{
+      label,
+      data,
+      backgroundColor: color + '99',
+      borderColor: color,
+      borderWidth: 1,
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { labels: { color: '#ccc' } } },
+    scales: {
+      x: { ticks: { color: '#888', maxRotation: 45 }, grid: { color: '#2a2a4e' } },
+      y: { ticks: { color: '#888' }, grid: { color: '#2a2a4e' } }
+    }
+  }
+});
+
+new Chart(document.getElementById('postChart'),
+  chartOpts('讚数', [59, 109, 247, 75, 80, 35, 364, 18, 90, 56, 34, 49, 15, 42, 21, 23], ["2026-03-30", "2026-04-28", "2026-05-06", "2026-05-08", "2026-05-14", "2026-05-17", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-24", "2026-05-26", "2026-05-28", "2026-05-31", "2026-06-03", "2026-06-05"], '#e94560'));
+new Chart(document.getElementById('reelChart'),
+  chartOpts('讚数', [95, 56, 36, 50, 199, 100, 80, 29, 19, 227, 67, 157, 25, 80, 120, 45, 419, 159, 68, 21, 74, 56, 52, 79, 142, 31, 44, 31, 74, 35, 111, 100, 15, 26], ["2026-03-19", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-28", "2026-03-29", "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-01", "2026-04-02", "2026-04-05", "2026-04-06", "2026-04-07", "2026-04-09", "2026-04-11", "2026-04-12", "2026-04-20", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-02", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-07", "2026-05-10", "2026-05-12", "2026-05-16", "2026-05-23", "2026-05-28", "2026-05-29", "2026-06-02"], '#f5a623'));
+</script>
+</body>
+</html>
