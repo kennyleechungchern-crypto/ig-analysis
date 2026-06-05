@@ -48,7 +48,7 @@ def _markdown_to_blocks(text: str) -> list[dict]:
                 "type": "paragraph",
                 "paragraph": {"rich_text": [{"type": "text", "text": {"content": _t(line)}}]},
             })
-    return blocks[:100]
+    return blocks[:99]
 
 
 def create_report_page(notion_token: str, parent_page_id: str, analysis: str, data: dict) -> str:
