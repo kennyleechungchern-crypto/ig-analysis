@@ -8,9 +8,20 @@ import anthropic
 import requests as http_requests
 from PIL import Image
 
+_whisper_model = None
+
+
+def _get_whisper_model():
+    global _whisper_model
+    if _whisper_model is None:
+        from faster_whisper import WhisperModel
+        print("  [whisper] loading model (first run may download ~150 MB)...")
+        _whisper_model = WhisperModel("base", device="cpu", compute_type="int8")
+        print("  [whisper] model ready")
+    return _whisper_model
+
 
 def _bytes_to_base64(data: bytes) -> str | None:
-    """Convert raw image bytes to base64-encoded JPEG via Pillow."""
     try:
         img = Image.open(io.BytesIO(data))
         if img.mode != "RGB":
@@ -25,7 +36,6 @@ def _bytes_to_base64(data: bytes) -> str | None:
 
 
 def _image_to_base64(url: str) -> str | None:
-    """Download an image URL and return base64-encoded JPEG."""
     try:
         resp = http_requests.get(url, timeout=15)
         resp.raise_for_status()
@@ -35,21 +45,21 @@ def _image_to_base64(url: str) -> str | None:
         return None
 
 
-def _video_to_frames(url: str, n_frames: int = 3) -> list[str]:
-    """Download a Reel video and extract n_frames evenly-spaced frames as base64 JPEG.
+def _analyze_reel(url: str) -> dict:
+    """Download a Reel, extract hook/ending frames and transcribe audio with Whisper.
 
-    Frames are sampled at 10%, 50%, 90% of the video duration so we capture
-    the hook, body, and ending of the content.  Falls back to [] on any error
-    so the caller can gracefully degrade to thumbnail_url.
+    Returns {'frames': [base64, ...], 'transcript': str | None}
+    Frames: index 0 = hook (5%), index 1 = ending (90%)
     """
+    result = {"frames": [], "transcript": None}
     try:
         resp = http_requests.get(url, timeout=60, stream=True)
         resp.raise_for_status()
 
         with tempfile.TemporaryDirectory() as tmpdir:
             video_path = os.path.join(tmpdir, "reel.mp4")
+            audio_path = os.path.join(tmpdir, "audio.wav")
 
-            # Download with a 50 MB cap to avoid huge files
             downloaded = 0
             max_bytes = 50 * 1024 * 1024
             with open(video_path, "wb") as f:
@@ -57,10 +67,10 @@ def _video_to_frames(url: str, n_frames: int = 3) -> list[str]:
                     f.write(chunk)
                     downloaded += len(chunk)
                     if downloaded >= max_bytes:
-                        print(f"  [warn] video >{max_bytes // 1024 // 1024}MB, capped download")
+                        print(f"  [warn] video >{max_bytes // 1024 // 1024}MB, capped")
                         break
 
-            # Get duration via ffprobe
+            # Get duration
             probe = subprocess.run(
                 [
                     "ffprobe", "-v", "error",
@@ -72,10 +82,8 @@ def _video_to_frames(url: str, n_frames: int = 3) -> list[str]:
             )
             duration = float(probe.stdout.strip())
 
-            # Extract frames at 10%, 50%, 90%
-            percentages = [0.1, 0.5, 0.9][:n_frames]
-            frames = []
-            for i, pct in enumerate(percentages):
+            # Extract hook frame (5%) and ending frame (90%)
+            for i, pct in enumerate([0.05, 0.90]):
                 ts = max(0.5, duration * pct)
                 frame_path = os.path.join(tmpdir, f"frame{i}.jpg")
                 subprocess.run(
@@ -89,13 +97,30 @@ def _video_to_frames(url: str, n_frames: int = 3) -> list[str]:
                     with open(frame_path, "rb") as fh:
                         b64 = _bytes_to_base64(fh.read())
                     if b64:
-                        frames.append(b64)
+                        result["frames"].append(b64)
 
-            return frames
+            # Extract audio and transcribe with Whisper
+            ffmpeg_audio = subprocess.run(
+                [
+                    "ffmpeg", "-i", video_path,
+                    "-vn", "-ar", "16000", "-ac", "1", "-f", "wav",
+                    audio_path, "-y",
+                ],
+                capture_output=True, timeout=60,
+            )
+            if ffmpeg_audio.returncode == 0 and os.path.exists(audio_path):
+                try:
+                    model = _get_whisper_model()
+                    segments, _ = model.transcribe(audio_path, beam_size=5)
+                    transcript = " ".join(seg.text.strip() for seg in segments)
+                    result["transcript"] = transcript.strip() or None
+                except Exception as e:
+                    print(f"  [warn] whisper transcription failed: {e}")
 
     except Exception as e:
-        print(f"  [warn] failed to extract video frames: {e}")
-        return []
+        print(f"  [warn] reel analysis failed: {e}")
+
+    return result
 
 
 ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 Instagram 账号近期的数据，请进行全面分析并给出可操作的建议。
@@ -105,7 +130,7 @@ ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 I
 
 注意：
 - Carousel 贴文的每张图片已附在此消息中（标注了对应贴文的发布日期与按讚数），请结合图片视觉内容进行分析。
-- Top 5 Reels 的实际视频帧（开头 / 中间 / 结尾各一帧）也已附上，请分析视频内容、画面构图与钩子设计。
+- Top 5 Reels 的完整口播文字稿（Whisper 转录）和关键帧（开头钩子 / 结尾 CTA）已附上，请基于文字稿进行深度内容分析。
 
 请分析以下维度，用繁体中文输出：
 
@@ -129,21 +154,36 @@ ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 I
 - 表现最好的 Reels 及成功因素
 - Reels 相比 Posts 的表现差异
 
-## 3a. Reels 视频内容分析
-- 开头帧的钩子：画面构图、文字叠加、人物表情/动作
-- 中段内容节奏：信息密度、场景切换规律
-- 结尾帧的行动呼吁（CTA）设计
-- 高互动 vs 低互动 Reels 的视频内容差异
+## 3a. Reels 口播内容深度分析（基于完整文字稿）
+每支 Reels 的完整文字稿和关键帧已附上，请逐一深度分析以下维度：
+
+**开头钩子（前 5-10 秒说了什么）**
+- 第一句话是否抓住注意力？使用了什么技巧（痛点、悬念、反直觉观点、数字冲击、承诺）？
+- 钩子强度评分（1-5 分）并说明原因
+
+**内容结构**
+- 是否有清晰的逻辑线索（问题 → 分析 → 解决方案 → CTA）？
+- 信息密度评估：有无冗余废话，内容是否精炼？
+
+**价值传递**
+- 核心价值主张是什么？观众看完能带走什么具体收获？
+
+**CTA 设计**
+- 结尾行动号召是否清晰？有无给观众行动的理由？
+
+**高互动公式提炼**
+- 对比各 Reels 的文字稿结构与互动数据，总结出 1-2 个可直接复用的「高互动开头公式」和「内容结构模板」
 
 ## 4. 内容主题洞察
-- 哪类内容最受欢迎
-- 受众互动偏好
+- 哪类话题最受欢迎
+- 受众互动偏好（留言内容分析）
 
 ## 5. 可行的改进建议（Top 5）
 - 具体、量化、可立即执行的行动项目
 
 ## 6. 下周内容计划建议
 - 推荐 3-5 个内容主题及发布时间
+- 每个主题附上建议的「开头第一句话」（直接可用）
 """
 
 
@@ -221,7 +261,7 @@ def analyze(data: dict) -> str:
         content.extend(image_blocks)
         print(f"  [vision] carousel {date_str}: {len(image_blocks)} images attached")
 
-    # ── Reels video frame analysis (top 5, 3 frames each) ───────────────────
+    # ── Reels: transcribe audio + extract hook/ending frames (top 5) ─────────
     top_reels = sorted(
         data.get("reels", []),
         key=lambda r: r.get("like_count", 0),
@@ -232,34 +272,51 @@ def analyze(data: dict) -> str:
     for reel in top_reels:
         date_str = (reel.get("timestamp") or "")[:10]
         likes = reel.get("like_count", 0)
+        views = reel.get("video_views", 0)
 
-        frames = _video_to_frames(reel.get("media_url", ""), n_frames=3)
+        analysis = _analyze_reel(reel.get("media_url", ""))
+        frames = analysis["frames"]
+        transcript = analysis["transcript"]
 
         if not frames:
-            # Fallback: use thumbnail_url if video extraction failed
             thumb = _image_to_base64(reel.get("thumbnail_url", ""))
             if thumb:
                 frames = [thumb]
                 print(f"  [vision] reel {date_str}: video failed, using thumbnail fallback")
 
-        if not frames:
+        if not frames and not transcript:
             continue
 
         reel_blocks.append({
             "type": "text",
-            "text": f"\n--- Reel {date_str}（{likes} 讚，{len(frames)} 帧：开头/中间/结尾）---",
+            "text": f"\n--- Reel {date_str}（{likes} 讚 · {views} 播放）---",
         })
-        for b64 in frames:
+
+        if transcript:
+            reel_blocks.append({
+                "type": "text",
+                "text": f"📝 口播完整文字稿：{transcript}",
+            })
+            print(f"  [whisper] reel {date_str}: {len(transcript)} chars transcribed")
+        else:
+            print(f"  [whisper] reel {date_str}: no transcript (music/silent)")
+
+        frame_labels = ["开头钩子", "结尾 CTA"]
+        for j, b64 in enumerate(frames):
+            label = frame_labels[j] if j < len(frame_labels) else f"帧{j+1}"
+            reel_blocks.append({
+                "type": "text",
+                "text": f"[{label}]",
+            })
             reel_blocks.append({
                 "type": "image",
                 "source": {"type": "base64", "media_type": "image/jpeg", "data": b64},
             })
-        print(f"  [vision] reel {date_str}: {len(frames)} frames extracted")
 
     if reel_blocks:
         content.append({
             "type": "text",
-            "text": "\n\n=== 以下为 Top 5 Reels 视频帧（开头 / 中间 / 结尾）===",
+            "text": "\n\n=== 以下为 Top 5 Reels 深度分析（口播文字稿 + 开头钩子帧 / 结尾 CTA 帧）===",
         })
         content.extend(reel_blocks)
 
