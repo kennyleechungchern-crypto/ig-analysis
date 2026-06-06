@@ -123,21 +123,22 @@ def _analyze_reel(url: str) -> dict:
     return result
 
 
-ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 Instagram 账号近期的数据，请进行全面分析并给出可操作的建议。
+ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 Instagram 账号所有内容的完整数据，请进行全面分析并给出可操作的建议。
 
-数据如下：
+数据如下（reels_summary 中已包含每支 Reel 的完整口播文字稿）：
 {data_json}
 
 注意：
-- Carousel 贴文的每张图片已附在此消息中（标注了对应贴文的发布日期与按讚数），请结合图片视觉内容进行分析。
-- Top 5 Reels 的完整口播文字稿（Whisper 转录）和关键帧（开头钩子 / 结尾 CTA）已附上，请基于文字稿进行深度内容分析。
+- 所有 Reels 的口播文字稿已包含在上方 JSON 的 transcript 字段中，请基于全部文字稿进行分析。
+- Top 10 Reels 的关键帧（开头钩子 / 结尾 CTA）已附在此消息中，供视觉参考。
+- Carousel 贴文的图片已附上，请结合视觉内容分析。
 
 请分析以下维度，用繁体中文输出：
 
 ## 1. 整体表现摘要
 - 总帖子数、Reels 数
 - 平均互动率（Engagement Rate = (likes + comments) / 帖子数，对比行业均值 1-3%）
-- 整体趋势评估
+- 整体趋势评估（近期是上升还是下滑？）
 
 ## 2. Posts 分析
 - 表现最好的前 3 篇及原因
@@ -149,47 +150,65 @@ ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 I
 - 封面图（第一张）的钩子设计
 - 内容结构（起承转合）是否清晰
 
-## 3. Reels 分析
-- 播放量与互动率对比
-- 表现最好的 Reels 及成功因素
-- Reels 相比 Posts 的表现差异
+## 3. Reels 全量数据分析
+- 34 支 Reels 整体互动率分布（高 / 中 / 低区间各多少支）
+- 播放量与 likes 的相关性
+- 哪个时期的内容表现最好？
 
-## 3a. Reels 口播内容深度分析（基于完整文字稿）
-每支 Reels 的完整文字稿和关键帧已附上，请逐一深度分析以下维度：
+## 3a. 口播内容深度分析（基于所有 Reels 完整文字稿）
+请系统性分析所有 Reels 的口播内容，重点提炼：
 
-**开头钩子（前 5-10 秒说了什么）**
-- 第一句话是否抓住注意力？使用了什么技巧（痛点、悬念、反直觉观点、数字冲击、承诺）？
-- 钩子强度评分（1-5 分）并说明原因
+**开头钩子模式分析**
+- 盘点所有 Reels 使用了哪几类开头技巧（痛点、悬念、反直觉、数字冲击、故事开场等）
+- 各类型开头对应的平均互动率是多少？哪种最有效？
+- 列出表现最好的 3 个开头原句，分析为什么有效
 
-**内容结构**
-- 是否有清晰的逻辑线索（问题 → 分析 → 解决方案 → CTA）？
-- 信息密度评估：有无冗余废话，内容是否精炼？
+**内容结构规律**
+- 高互动 Reels（likes > 100）的内容结构有何共同点？
+- 低互动 Reels 常见的结构问题是什么？
+- 最有效的内容结构模板是什么？
 
-**价值传递**
-- 核心价值主张是什么？观众看完能带走什么具体收获？
+**话题与主题分析**
+- 哪类话题持续高互动？哪类话题反应冷淡？
+- 受众最感兴趣的核心关键词是什么？
 
-**CTA 设计**
-- 结尾行动号召是否清晰？有无给观众行动的理由？
+**CTA 设计分析**
+- 高互动 Reels 的结尾 CTA 是什么？有没有规律？
+- 给出 3 个可直接复用的高效 CTA 句式
 
-**高互动公式提炼**
-- 对比各 Reels 的文字稿结构与互动数据，总结出 1-2 个可直接复用的「高互动开头公式」和「内容结构模板」
+**高互动内容公式提炼**
+- 综合以上分析，提炼出 2-3 个「可直接复用的爆款公式」
+  格式：[开头句式] + [内容结构] + [CTA] = [预期效果]
 
 ## 4. 内容主题洞察
-- 哪类话题最受欢迎
-- 受众互动偏好（留言内容分析）
+- 你的账号核心定位是否清晰？受众画像推测
+- 哪类内容与定位最匹配且互动最高？
 
 ## 5. 可行的改进建议（Top 5）
 - 具体、量化、可立即执行的行动项目
 
-## 6. 下周内容计划建议
-- 推荐 3-5 个内容主题及发布时间
-- 每个主题附上建议的「开头第一句话」（直接可用）
+## 6. 下周内容计划建议（5 个）
+- 每个主题附上：话题 + 建议发布时间 + 开头第一句话（直接可用）
 """
 
 
 def analyze(data: dict) -> str:
     client = anthropic.Anthropic()
+    all_reels = data.get("reels", [])
 
+    # ── Step 1: Transcribe ALL Reels + extract frames ─────────────────────────
+    print(f"  [whisper] analyzing all {len(all_reels)} reels...")
+    for reel in all_reels:
+        date_str = (reel.get("timestamp") or "")[:10]
+        result = _analyze_reel(reel.get("media_url", ""))
+        reel["_transcript"] = result["transcript"]
+        reel["_frames"] = result["frames"]
+        if result["transcript"]:
+            print(f"  [whisper] {date_str}: {len(result['transcript'])} chars transcribed")
+        else:
+            print(f"  [whisper] {date_str}: no transcript (music/silent/failed)")
+
+    # ── Step 2: Build compact with ALL transcripts ────────────────────────────
     compact = {
         "fetched_at": data["fetched_at"],
         "posts_summary": [
@@ -214,11 +233,12 @@ def analyze(data: dict) -> str:
                 "video_views": r.get("video_views", 0),
                 "plays": r.get("plays", 0),
                 "reach": r.get("reach", 0),
+                "transcript": r.get("_transcript"),
             }
-            for r in data.get("reels", [])
+            for r in all_reels
         ],
         "total_posts": len(data.get("posts", [])),
-        "total_reels": len(data.get("reels", [])),
+        "total_reels": len(all_reels),
     }
 
     content = [
@@ -261,53 +281,32 @@ def analyze(data: dict) -> str:
         content.extend(image_blocks)
         print(f"  [vision] carousel {date_str}: {len(image_blocks)} images attached")
 
-    # ── Reels: transcribe audio + extract hook/ending frames (top 5) ─────────
-    top_reels = sorted(
-        data.get("reels", []),
-        key=lambda r: r.get("like_count", 0),
-        reverse=True,
-    )[:5]
+    # ── Reel frames: Top 10 by likes (transcripts already in compact JSON) ────
+    top_reels = sorted(all_reels, key=lambda r: r.get("like_count", 0), reverse=True)[:10]
 
     reel_blocks = []
     for reel in top_reels:
         date_str = (reel.get("timestamp") or "")[:10]
         likes = reel.get("like_count", 0)
-        views = reel.get("video_views", 0)
-
-        analysis = _analyze_reel(reel.get("media_url", ""))
-        frames = analysis["frames"]
-        transcript = analysis["transcript"]
+        frames = reel.get("_frames", [])
 
         if not frames:
             thumb = _image_to_base64(reel.get("thumbnail_url", ""))
             if thumb:
                 frames = [thumb]
-                print(f"  [vision] reel {date_str}: video failed, using thumbnail fallback")
+                print(f"  [vision] reel {date_str}: using thumbnail fallback")
 
-        if not frames and not transcript:
+        if not frames:
             continue
 
         reel_blocks.append({
             "type": "text",
-            "text": f"\n--- Reel {date_str}（{likes} 讚 · {views} 播放）---",
+            "text": f"\n--- Reel {date_str}（{likes} 讚）---",
         })
-
-        if transcript:
-            reel_blocks.append({
-                "type": "text",
-                "text": f"📝 口播完整文字稿：{transcript}",
-            })
-            print(f"  [whisper] reel {date_str}: {len(transcript)} chars transcribed")
-        else:
-            print(f"  [whisper] reel {date_str}: no transcript (music/silent)")
-
         frame_labels = ["开头钩子", "结尾 CTA"]
         for j, b64 in enumerate(frames):
             label = frame_labels[j] if j < len(frame_labels) else f"帧{j+1}"
-            reel_blocks.append({
-                "type": "text",
-                "text": f"[{label}]",
-            })
+            reel_blocks.append({"type": "text", "text": f"[{label}]"})
             reel_blocks.append({
                 "type": "image",
                 "source": {"type": "base64", "media_type": "image/jpeg", "data": b64},
@@ -316,7 +315,7 @@ def analyze(data: dict) -> str:
     if reel_blocks:
         content.append({
             "type": "text",
-            "text": "\n\n=== 以下为 Top 5 Reels 深度分析（口播文字稿 + 开头钩子帧 / 结尾 CTA 帧）===",
+            "text": "\n\n=== Top 10 Reels 关键帧（所有 Reels 完整文字稿已在上方 JSON 中）===",
         })
         content.extend(reel_blocks)
 
