@@ -350,7 +350,7 @@ def analyze(data: dict) -> str:
         content.extend(reel_blocks)
 
     message = client.messages.create(
-        model="claude-opus-4-8",
+        model="claude-sonnet-4-6",
         max_tokens=4096,
         system="你是专业的社交媒体策略顾问，擅长 Instagram 数据分析，输出繁体中文报告。",
         messages=[{"role": "user", "content": content}],
