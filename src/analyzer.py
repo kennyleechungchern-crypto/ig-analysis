@@ -46,12 +46,16 @@ def _image_to_base64(url: str) -> str | None:
 
 
 def _analyze_reel(url: str) -> dict:
-    """Download a Reel, extract hook/ending frames and transcribe audio with Whisper.
+    """Download a Reel, transcribe audio, then auto-detect content type.
 
-    Returns {'frames': [base64, ...], 'transcript': str | None}
-    Frames: index 0 = hook (5%), index 1 = ending (90%)
+    Talking-head mode (transcript >= 50 words):
+      → 2 frames: hook (5%) + ending (90%)
+    Visual mode (transcript < 50 words):
+      → 6 frames evenly spaced to cover the full visual story
+
+    Returns {'frames': [base64, ...], 'transcript': str | None, 'mode': 'talking_head' | 'visual'}
     """
-    result = {"frames": [], "transcript": None}
+    result = {"frames": [], "transcript": None, "mode": "visual"}
     try:
         resp = http_requests.get(url, timeout=60, stream=True)
         resp.raise_for_status()
@@ -82,24 +86,7 @@ def _analyze_reel(url: str) -> dict:
             )
             duration = float(probe.stdout.strip())
 
-            # Extract hook frame (5%) and ending frame (90%)
-            for i, pct in enumerate([0.05, 0.90]):
-                ts = max(0.5, duration * pct)
-                frame_path = os.path.join(tmpdir, f"frame{i}.jpg")
-                subprocess.run(
-                    [
-                        "ffmpeg", "-ss", str(ts), "-i", video_path,
-                        "-frames:v", "1", "-q:v", "2", frame_path, "-y",
-                    ],
-                    capture_output=True, timeout=15,
-                )
-                if os.path.exists(frame_path):
-                    with open(frame_path, "rb") as fh:
-                        b64 = _bytes_to_base64(fh.read())
-                    if b64:
-                        result["frames"].append(b64)
-
-            # Extract audio and transcribe with Whisper
+            # Step 1: Transcribe audio first to determine content type
             ffmpeg_audio = subprocess.run(
                 [
                     "ffmpeg", "-i", video_path,
@@ -116,6 +103,32 @@ def _analyze_reel(url: str) -> dict:
                     result["transcript"] = transcript.strip() or None
                 except Exception as e:
                     print(f"  [warn] whisper transcription failed: {e}")
+
+            # Step 2: Auto-detect mode based on transcript word count
+            word_count = len((result["transcript"] or "").split())
+            if word_count >= 50:
+                result["mode"] = "talking_head"
+                frame_percentages = [0.05, 0.90]  # hook + ending only
+            else:
+                result["mode"] = "visual"
+                frame_percentages = [0.08, 0.22, 0.38, 0.54, 0.70, 0.86]  # 6 frames, full coverage
+
+            # Step 3: Extract frames according to detected mode
+            for i, pct in enumerate(frame_percentages):
+                ts = max(0.5, duration * pct)
+                frame_path = os.path.join(tmpdir, f"frame{i}.jpg")
+                subprocess.run(
+                    [
+                        "ffmpeg", "-ss", str(ts), "-i", video_path,
+                        "-frames:v", "1", "-q:v", "2", frame_path, "-y",
+                    ],
+                    capture_output=True, timeout=15,
+                )
+                if os.path.exists(frame_path):
+                    with open(frame_path, "rb") as fh:
+                        b64 = _bytes_to_base64(fh.read())
+                    if b64:
+                        result["frames"].append(b64)
 
     except Exception as e:
         print(f"  [warn] reel analysis failed: {e}")
@@ -155,30 +168,43 @@ ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 I
 - 播放量与 likes 的相关性
 - 哪个时期的内容表现最好？
 
-## 3a. 口播内容深度分析（基于所有 Reels 完整文字稿）
-请系统性分析所有 Reels 的口播内容，重点提炼：
+## 3a. Reels 内容深度分析（自适应：口播 vs 视觉内容）
 
-**开头钩子模式分析**
-- 盘点所有 Reels 使用了哪几类开头技巧（痛点、悬念、反直觉、数字冲击、故事开场等）
-- 各类型开头对应的平均互动率是多少？哪种最有效？
-- 列出表现最好的 3 个开头原句，分析为什么有效
+每支 Reel 的 content_type 字段标注了「talking_head（口播）」或「visual（视觉）」，请按类型分别分析：
+
+### 口播类 Reels（content_type = talking_head）
+基于完整文字稿分析：
+
+**开头钩子模式**
+- 各 Reel 使用了哪类开头技巧（痛点、悬念、反直觉、数字冲击、故事开场）？
+- 各类型开头对应的平均互动率？哪种最有效？
+- 表现最好的 3 个开头原句及原因
 
 **内容结构规律**
-- 高互动 Reels（likes > 100）的内容结构有何共同点？
-- 低互动 Reels 常见的结构问题是什么？
-- 最有效的内容结构模板是什么？
+- 高互动口播（likes > 100）的内容结构共同点
+- 低互动口播的常见问题
+- 最有效的内容结构模板
 
-**话题与主题分析**
-- 哪类话题持续高互动？哪类话题反应冷淡？
-- 受众最感兴趣的核心关键词是什么？
+**CTA 设计**
+- 结尾行动号召的规律，给出 3 个可直接复用的 CTA 句式
 
-**CTA 设计分析**
-- 高互动 Reels 的结尾 CTA 是什么？有没有规律？
-- 给出 3 个可直接复用的高效 CTA 句式
+**高互动公式提炼**
+- 2-3 个可直接复用的爆款公式：[开头] + [结构] + [CTA]
 
-**高互动内容公式提炼**
-- 综合以上分析，提炼出 2-3 个「可直接复用的爆款公式」
-  格式：[开头句式] + [内容结构] + [CTA] = [预期效果]
+### 视觉类 Reels（content_type = visual，如产品展示、剪辑、幕后、搞笑）
+基于关键帧画面分析：
+
+**视觉钩子设计**
+- 开头帧是否有强烈的视觉冲击或悬念？用了什么视觉手法？
+- 高互动视觉 Reel 的封面/开头画面有何特征？
+
+**内容节奏与画面结构**
+- 6 帧连续画面中能看出剪辑节奏吗？信息如何逐步展开？
+- 字幕/文字叠加设计是否清晰有吸引力？
+
+**视觉内容公式**
+- 高互动视觉 Reel 的共同视觉特征是什么？
+- 给出 2 个可复用的视觉内容框架
 
 ## 4. 内容主题洞察
 - 你的账号核心定位是否清晰？受众画像推测
@@ -203,10 +229,9 @@ def analyze(data: dict) -> str:
         result = _analyze_reel(reel.get("media_url", ""))
         reel["_transcript"] = result["transcript"]
         reel["_frames"] = result["frames"]
-        if result["transcript"]:
-            print(f"  [whisper] {date_str}: {len(result['transcript'])} chars transcribed")
-        else:
-            print(f"  [whisper] {date_str}: no transcript (music/silent/failed)")
+        reel["_mode"] = result["mode"]
+        transcript_info = f"{len(result['transcript'])} chars" if result["transcript"] else "none"
+        print(f"  [whisper] {date_str}: mode={result['mode']}, transcript={transcript_info}, frames={len(result['frames'])}")
 
     # ── Step 2: Build compact with ALL transcripts ────────────────────────────
     compact = {
@@ -233,6 +258,7 @@ def analyze(data: dict) -> str:
                 "video_views": r.get("video_views", 0),
                 "plays": r.get("plays", 0),
                 "reach": r.get("reach", 0),
+                "content_type": r.get("_mode", "visual"),
                 "transcript": r.get("_transcript"),
             }
             for r in all_reels
@@ -299,11 +325,15 @@ def analyze(data: dict) -> str:
         if not frames:
             continue
 
+        mode = reel.get("_mode", "visual")
         reel_blocks.append({
             "type": "text",
-            "text": f"\n--- Reel {date_str}（{likes} 讚）---",
+            "text": f"\n--- Reel {date_str}（{likes} 讚 · {mode}）---",
         })
-        frame_labels = ["开头钩子", "结尾 CTA"]
+        if mode == "talking_head":
+            frame_labels = ["开头钩子", "结尾 CTA"]
+        else:
+            frame_labels = ["帧1(8%)", "帧2(22%)", "帧3(38%)", "帧4(54%)", "帧5(70%)", "帧6(86%)"]
         for j, b64 in enumerate(frames):
             label = frame_labels[j] if j < len(frame_labels) else f"帧{j+1}"
             reel_blocks.append({"type": "text", "text": f"[{label}]"})
