@@ -1,16 +1,18 @@
 import base64
 import io
 import json
+import os
+import subprocess
+import tempfile
 import anthropic
 import requests as http_requests
 from PIL import Image
 
 
-def _image_to_base64(url: str) -> str | None:
+def _bytes_to_base64(data: bytes) -> str | None:
+    """Convert raw image bytes to base64-encoded JPEG via Pillow."""
     try:
-        resp = http_requests.get(url, timeout=15)
-        resp.raise_for_status()
-        img = Image.open(io.BytesIO(resp.content))
+        img = Image.open(io.BytesIO(data))
         if img.mode != "RGB":
             img = img.convert("RGB")
         img.thumbnail((1024, 1024))
@@ -18,8 +20,82 @@ def _image_to_base64(url: str) -> str | None:
         img.save(buf, format="JPEG", quality=85)
         return base64.standard_b64encode(buf.getvalue()).decode("utf-8")
     except Exception as e:
+        print(f"  [warn] failed to encode image: {e}")
+        return None
+
+
+def _image_to_base64(url: str) -> str | None:
+    """Download an image URL and return base64-encoded JPEG."""
+    try:
+        resp = http_requests.get(url, timeout=15)
+        resp.raise_for_status()
+        return _bytes_to_base64(resp.content)
+    except Exception as e:
         print(f"  [warn] failed to load image: {e}")
         return None
+
+
+def _video_to_frames(url: str, n_frames: int = 3) -> list[str]:
+    """Download a Reel video and extract n_frames evenly-spaced frames as base64 JPEG.
+
+    Frames are sampled at 10%, 50%, 90% of the video duration so we capture
+    the hook, body, and ending of the content.  Falls back to [] on any error
+    so the caller can gracefully degrade to thumbnail_url.
+    """
+    try:
+        resp = http_requests.get(url, timeout=60, stream=True)
+        resp.raise_for_status()
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            video_path = os.path.join(tmpdir, "reel.mp4")
+
+            # Download with a 50 MB cap to avoid huge files
+            downloaded = 0
+            max_bytes = 50 * 1024 * 1024
+            with open(video_path, "wb") as f:
+                for chunk in resp.iter_content(chunk_size=1024 * 1024):
+                    f.write(chunk)
+                    downloaded += len(chunk)
+                    if downloaded >= max_bytes:
+                        print(f"  [warn] video >{max_bytes // 1024 // 1024}MB, capped download")
+                        break
+
+            # Get duration via ffprobe
+            probe = subprocess.run(
+                [
+                    "ffprobe", "-v", "error",
+                    "-show_entries", "format=duration",
+                    "-of", "default=noprint_wrappers=1:nokey=1",
+                    video_path,
+                ],
+                capture_output=True, text=True, timeout=15,
+            )
+            duration = float(probe.stdout.strip())
+
+            # Extract frames at 10%, 50%, 90%
+            percentages = [0.1, 0.5, 0.9][:n_frames]
+            frames = []
+            for i, pct in enumerate(percentages):
+                ts = max(0.5, duration * pct)
+                frame_path = os.path.join(tmpdir, f"frame{i}.jpg")
+                subprocess.run(
+                    [
+                        "ffmpeg", "-ss", str(ts), "-i", video_path,
+                        "-frames:v", "1", "-q:v", "2", frame_path, "-y",
+                    ],
+                    capture_output=True, timeout=15,
+                )
+                if os.path.exists(frame_path):
+                    with open(frame_path, "rb") as fh:
+                        b64 = _bytes_to_base64(fh.read())
+                    if b64:
+                        frames.append(b64)
+
+            return frames
+
+    except Exception as e:
+        print(f"  [warn] failed to extract video frames: {e}")
+        return []
 
 
 ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 Instagram 账号近期的数据，请进行全面分析并给出可操作的建议。
@@ -29,7 +105,7 @@ ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 I
 
 注意：
 - Carousel 贴文的每张图片已附在此消息中（标注了对应贴文的发布日期与按讚数），请结合图片视觉内容进行分析。
-- 高互动 Reels 的封面缩略图也已附上，请分析封面的视觉吸引力与钩子设计。
+- Top 5 Reels 的实际视频帧（开头 / 中间 / 结尾各一帧）也已附上，请分析视频内容、画面构图与钩子设计。
 
 请分析以下维度，用繁体中文输出：
 
@@ -53,10 +129,11 @@ ANALYSIS_PROMPT = """你是一位专业的社交媒体分析师。以下是某 I
 - 表现最好的 Reels 及成功因素
 - Reels 相比 Posts 的表现差异
 
-## 3a. Reels 封面视觉分析
-- 高互动 Reels 封面的构图、文字、表情/人物呈现规律
-- 封面是否有清晰的钩子（标题文字、强烈表情、反差画面）
-- 与低互动 Reels 封面的对比差异
+## 3a. Reels 视频内容分析
+- 开头帧的钩子：画面构图、文字叠加、人物表情/动作
+- 中段内容节奏：信息密度、场景切换规律
+- 结尾帧的行动呼吁（CTA）设计
+- 高互动 vs 低互动 Reels 的视频内容差异
 
 ## 4. 内容主题洞察
 - 哪类内容最受欢迎
@@ -111,6 +188,7 @@ def analyze(data: dict) -> str:
         }
     ]
 
+    # ── Carousel visual analysis (top 5, up to 6 IMAGE slides each) ──────────
     carousels = sorted(
         [p for p in data.get("posts", []) if p.get("media_type") == "CAROUSEL_ALBUM" and p.get("children")],
         key=lambda p: p.get("like_count", 0),
@@ -128,11 +206,11 @@ def analyze(data: dict) -> str:
             url = child.get("media_url")
             if not url:
                 continue
-            b64_data = _image_to_base64(url)
-            if b64_data:
+            b64 = _image_to_base64(url)
+            if b64:
                 image_blocks.append({
                     "type": "image",
-                    "source": {"type": "base64", "media_type": "image/jpeg", "data": b64_data},
+                    "source": {"type": "base64", "media_type": "image/jpeg", "data": b64},
                 })
         if not image_blocks:
             continue
@@ -143,37 +221,47 @@ def analyze(data: dict) -> str:
         content.extend(image_blocks)
         print(f"  [vision] carousel {date_str}: {len(image_blocks)} images attached")
 
-    # Reels thumbnail analysis — top 8 by likes
+    # ── Reels video frame analysis (top 5, 3 frames each) ───────────────────
     top_reels = sorted(
-        [r for r in data.get("reels", []) if r.get("thumbnail_url")],
+        data.get("reels", []),
         key=lambda r: r.get("like_count", 0),
         reverse=True,
-    )[:8]
+    )[:5]
 
-    reel_thumb_blocks = []
+    reel_blocks = []
     for reel in top_reels:
-        url = reel.get("thumbnail_url")
-        b64_data = _image_to_base64(url)
-        if not b64_data:
-            continue
         date_str = (reel.get("timestamp") or "")[:10]
         likes = reel.get("like_count", 0)
-        reel_thumb_blocks.append({
-            "type": "text",
-            "text": f"\n--- Reel 封面 {date_str}（{likes} 讚）---",
-        })
-        reel_thumb_blocks.append({
-            "type": "image",
-            "source": {"type": "base64", "media_type": "image/jpeg", "data": b64_data},
-        })
-        print(f"  [vision] reel thumbnail {date_str}: {likes} likes")
 
-    if reel_thumb_blocks:
+        frames = _video_to_frames(reel.get("media_url", ""), n_frames=3)
+
+        if not frames:
+            # Fallback: use thumbnail_url if video extraction failed
+            thumb = _image_to_base64(reel.get("thumbnail_url", ""))
+            if thumb:
+                frames = [thumb]
+                print(f"  [vision] reel {date_str}: video failed, using thumbnail fallback")
+
+        if not frames:
+            continue
+
+        reel_blocks.append({
+            "type": "text",
+            "text": f"\n--- Reel {date_str}（{likes} 讚，{len(frames)} 帧：开头/中间/结尾）---",
+        })
+        for b64 in frames:
+            reel_blocks.append({
+                "type": "image",
+                "source": {"type": "base64", "media_type": "image/jpeg", "data": b64},
+            })
+        print(f"  [vision] reel {date_str}: {len(frames)} frames extracted")
+
+    if reel_blocks:
         content.append({
             "type": "text",
-            "text": "\n\n=== 以下为 Top 8 Reels 封面缩略图 ===",
+            "text": "\n\n=== 以下为 Top 5 Reels 视频帧（开头 / 中间 / 结尾）===",
         })
-        content.extend(reel_thumb_blocks)
+        content.extend(reel_blocks)
 
     message = client.messages.create(
         model="claude-opus-4-8",
