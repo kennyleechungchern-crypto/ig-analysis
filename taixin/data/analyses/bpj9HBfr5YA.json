@@ -1,0 +1,63 @@
+{
+ "id": "2959ae81-5fe7-4e87-89a8-51ec8da68bc8",
+ "youtube_url": "https://www.youtube.com/watch?v=bpj9HBfr5YA",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:08",
+   "label": "Opening Hook",
+   "audio": "If I didn't go home all day today, didn't answer calls all day, and there were girls at the dinner party we went to, would you be angry?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:08",
+   "timestamp_end": "0:18",
+   "label": "Product Information",
+   "audio": "If your boyfriend had learned my sales formula today, I would come home today, you would still be angry with a sour face, and then you would reply to me with that sentence just now. You just said: 'Hey, you had a lot of fun today, didn't you?' right?"
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:18",
+   "timestamp_end": "0:28",
+   "label": "Product Selling Points",
+   "audio": "Um... not very happy either, I'm sorry, that colleague of mine, he just happened to have a breakup today, so he asked us to go to KTV like this. I'm really sorry."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:28",
+   "timestamp_end": "0:33",
+   "label": "Usage Scenarios",
+   "audio": "Understood. If I were you, I would have the same feeling. I also understand why you are angry now."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:33",
+   "timestamp_end": "0:42",
+   "label": "Real Experience",
+   "audio": "I just want to know, is the point you're angry about that I didn't answer the phone? Or is it because I came home too late? Both. So you're angry that I came home too late and didn't answer the phone."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:42",
+   "timestamp_end": "0:52",
+   "label": "Problem Solving",
+   "audio": "Okay, then I'm quite sorry, because today my colleague really found me unexpectedly, and he kept complaining to me, I couldn't speak, yeah. If you came home this late, I would definitely worry about you too."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:52",
+   "timestamp_end": "0:58",
+   "label": "Problem Solving",
+   "audio": "Then I promise you, if in the future I will definitely answer your calls, and then I won't come home this late, okay?"
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:58",
+   "timestamp_end": "0:59",
+   "label": "Call to Action",
+   "audio": "If that's the case, then let's not fight like this, okay?"
+  }
+ ]
+}

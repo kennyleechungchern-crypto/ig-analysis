@@ -1,0 +1,26 @@
+# 人生四大階段
+
+- 来源: https://www.youtube.com/watch?v=lpzAdjk44hk
+- 频道: @eintaixin  ·  播放: 2500  ·  时长: 约 98s
+- 转写方式: Higgsfield 视频分析（口播内容的英文转述，非中文逐字）· 2026-09-16
+
+## 口播内容（英文转述）
+
+Is the 100 points you're desperately chasing right now really what you want? Life has four necessary stages. I walked through them this way myself. The first stage: pure happiness. When I was young, I had nothing, but owning one point was one point of joy. Hiding under the piano playing house... ...getting dirty all over, yet laughing happier than anyone. The happiness of that time didn't need conditions. The second stage: desperate chasing. You start to compare, to calculate. Others have cars and you don't. Others fly business class and you fly economy. You work hard to reach that 100 points. It's like a treadmill. You run faster and faster, your heart rate gets higher and higher, but you look down and you're still in the same place. Because that belt is a speed set by others, not your own rhythm. Third, the peak of emptiness. The car is bought, the house is lived in, the bag is owned. But what you have isn't the happiness you imagined. Because that 100 points was never your standard, it was someone else's. I left my hometown and started from scratch without any customers, worked my way up to become one of the top 100 Porsche sales consultants in the world. One day, a customer chatted with me and suddenly asked, 'Taixin, you're already number one, do you feel happy?' I smiled at the time and said I was quite happy, but after getting back into the car, I thought for a long time because I couldn't answer. That moment felt like climbing a very high mountain. Reaching the peak and looking down, you realize the scenery is beautiful, but your heart knows this mountain was never the one you wanted to climb. You climbed it because others were climbing it, so you followed. Or was it because you yourself wanted to climb? Then came the fourth stage: awakening. You ask yourself, what am I living for? And this question will torment you for a long time, but it's this pain that will force you to find your own answer. When you find it, you'll return to the first stage, where one point of possession is one point of joy. No longer out of ignorance, but because you truly understand. What's the difference? Childhood happiness is instinct; happiness after awakening is a choice. Which stage are you at? Leave a comment and let me know. I am Taixin, leading you to understand human nature and close high-value deals.
+
+## 分段
+
+- [   0s–  11s] (Opening Hook) Is the 100 points you're desperately chasing right now really what you want? Life has four necessary stages. I walked through them this way myself. The first stage: pure happiness.
+- [  11s–  15s] (Usage Scenarios) When I was young, I had nothing, but owning one point was one point of joy. Hiding under the piano playing house...
+- [  15s–  17s] (Real Experience) ...getting dirty all over, yet laughing happier than anyone. The happiness of that time didn't need conditions.
+- [  17s–  25s] (Problem Solving) The second stage: desperate chasing. You start to compare, to calculate. Others have cars and you don't. Others fly business class and you fly economy. You work hard to reach that 100 points.
+- [  25s–  34s] (Usage Scenarios) It's like a treadmill. You run faster and faster, your heart rate gets higher and higher, but you look down and you're still in the same place. Because that belt is a speed set by others, not your own rhythm.
+- [  34s–  45s] (Problem Solving) Third, the peak of emptiness. The car is bought, the house is lived in, the bag is owned. But what you have isn't the happiness you imagined. Because that 100 points was never your standard, it was someone else's.
+- [  45s–  49s] (Real Experience) I left my hometown and started from scratch without any customers, worked my way up to become one of the top 100 Porsche sales consultants in the world.
+- [  49s–  60s] (Real Experience) One day, a customer chatted with me and suddenly asked, 'Taixin, you're already number one, do you feel happy?' I smiled at the time and said I was quite happy, but after getting back into the car, I thought for a long time because I couldn't answer.
+- [  60s–  68s] (Usage Scenarios) That moment felt like climbing a very high mountain. Reaching the peak and looking down, you realize the scenery is beautiful, but your heart knows this mountain was never the one you wanted to climb.
+- [  68s–  72s] (Real Experience) You climbed it because others were climbing it, so you followed. Or was it because you yourself wanted to climb?
+- [  72s–  77s] (Usage Scenarios) Then came the fourth stage: awakening. You ask yourself, what am I living for?
+- [  77s–  89s] (Problem Solving) And this question will torment you for a long time, but it's this pain that will force you to find your own answer. When you find it, you'll return to the first stage, where one point of possession is one point of joy.
+- [  89s–  93s] (Real Experience) No longer out of ignorance, but because you truly understand. What's the difference? Childhood happiness is instinct; happiness after awakening is a choice.
+- [  93s–  98s] (Call to Action) Which stage are you at? Leave a comment and let me know. I am Taixin, leading you to understand human nature and close high-value deals.

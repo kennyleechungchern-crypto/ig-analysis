@@ -1,0 +1,56 @@
+{
+ "id": "cbda1bcf-07b0-4d98-8ff8-9436c9635054",
+ "youtube_url": "https://www.youtube.com/watch?v=GUZiNTcz-rg",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:13",
+   "label": "Opening Hook",
+   "audio": "Last year, our designer Yunpin, he told me during a meeting, 'Boss, wait a second, I have something to tell you.' I said, 'What is it? Say it.' He said, 'Boss, I want to go abroad for two and a half months.'"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:13",
+   "timestamp_end": "0:27",
+   "label": "Real Experience",
+   "audio": "Eh? Sounds a bit weird, right? You've been with the company for less than a year, and you want to go abroad for two and a half months. Suddenly I thought of something. When I was a salesperson before, I didn't dare to ask my supervisor for leave at all. So I felt envious in my heart and said, 'Fortunately, I'm your boss!'"
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:27",
+   "timestamp_end": "0:34",
+   "label": "Real Experience",
+   "audio": "I just said, 'Okay, go ahead. Do you have money?' He said, 'No, I'm traveling on a budget.'"
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:34",
+   "timestamp_end": "0:46",
+   "label": "Problem Solving",
+   "audio": "Hmm? Budget travel? I don't think that's right either. Well, let me think of a way for you. Why don't you go abroad and play, and I'll still pay you your salary as you work. At least you'll have money to live abroad."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:46",
+   "timestamp_end": "0:50",
+   "label": "Product Selling Points",
+   "audio": "What I want to cultivate in you is the ability to work in various places."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:50",
+   "timestamp_end": "0:56",
+   "label": "Product Selling Points",
+   "audio": "What I want to cultivate is your ability to work for a lifetime, not just your ability to work at our EinFit."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:56",
+   "timestamp_end": "1:00",
+   "label": "Call to Action",
+   "audio": "So I let him take his laptop and go to South America."
+  }
+ ]
+}

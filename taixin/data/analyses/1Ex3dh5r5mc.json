@@ -1,0 +1,56 @@
+{
+ "id": "f52c43c9-8dc6-4de9-8ff9-dc036789508c",
+ "youtube_url": "https://www.youtube.com/watch?v=1Ex3dh5r5mc",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:10",
+   "label": "Opening Hook",
+   "audio": "When the customer is impatient with me, what will I do? I will smile, express agreement, but I won't be impatient. This is the professionalism of sales. What is the professionalism of sales? I also give you all a few words, okay?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:10",
+   "timestamp_end": "0:15",
+   "label": "Product Selling Points",
+   "audio": "Professionalism is: Don't give up your thoughts because of any smearing."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:15",
+   "timestamp_end": "0:19",
+   "label": "Product Selling Points",
+   "audio": "Don't change your tone because of any emotions."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:19",
+   "timestamp_end": "0:24",
+   "label": "Product Selling Points",
+   "audio": "Don't shake your thinking because of any doubts."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:24",
+   "timestamp_end": "0:31",
+   "label": "Product Selling Points",
+   "audio": "Don't affect your performance because of any anxiety. This is called professionalism."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:31",
+   "timestamp_end": "0:41",
+   "label": "Usage Scenarios",
+   "audio": "So when I have earned the customer's money, and the customer is impatient with me, is there anything wrong? I am very happy, because I earned his money, right?"
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:41",
+   "timestamp_end": "0:52",
+   "label": "Call to Action",
+   "audio": "If you want to earn money from every customer, you have this mindset of service. So we must take the customer's money, then we must help him solve problems, and serve him enthusiastically. You absolutely cannot have earned the customer's money and still be complaining about the customer. That's not right, is it? Do you think that will help your performance? It won't."
+  }
+ ]
+}

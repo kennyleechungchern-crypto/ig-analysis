@@ -1,0 +1,63 @@
+{
+ "id": "7d108546-08ba-4a68-b125-ee8d6589ac1c",
+ "youtube_url": "https://www.youtube.com/watch?v=3jFcxfYZbH0",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:05",
+   "label": "Opening Hook",
+   "audio": "If a customer comes to you today and says, 'If you return the commission to me, I'll buy from you.' Would you return it?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:05",
+   "timestamp_end": "0:12",
+   "label": "Problem Solving",
+   "audio": "Okay, this problem. We naturally decide based on the market mechanism. Then we first have to see, under this company system, can I return the commission?"
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:12",
+   "timestamp_end": "0:21",
+   "label": "Problem Solving",
+   "audio": "We don't do things that violate company policy. But if it is returnable, I believe 99% of sales professionals would return it just to close the deal. Right."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:21",
+   "timestamp_end": "0:31",
+   "label": "Product Selling Points",
+   "audio": "When you have closed the deal for the sake of the return commission... I think... a return, it must be returned. But how to return it, and how to return it more comfortably than others?"
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:31",
+   "timestamp_end": "0:37",
+   "label": "Product Selling Points",
+   "audio": "This means I can return it, but I can't return as much as others. I still make money because everything I do is meant to stabilize my price."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:37",
+   "timestamp_end": "0:48",
+   "label": "Real Experience",
+   "audio": "So I will tell the customer a very classic line, everyone here can learn it. 'If you buy from me today, you won't find the cheapest price in Taiwan, but you won't find the most expensive either. I can only guarantee that after you walk out this door, you won't find a better sales consultant.'"
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:48",
+   "timestamp_end": "0:54",
+   "label": "Product Selling Points",
+   "audio": "If I am 10,000 dollars different from others, but you get 10 years of service in exchange, do you think it's worth it? Let you decide."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:54",
+   "timestamp_end": "0:58",
+   "label": "Real Experience",
+   "audio": "I should be moved to tears! Right! [audience laughter and applause]"
+  }
+ ]
+}

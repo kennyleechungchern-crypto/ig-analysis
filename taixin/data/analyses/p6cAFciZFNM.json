@@ -1,0 +1,77 @@
+{
+ "id": "99995d91-4e0b-412b-8c88-046b382954c4",
+ "youtube_url": "https://www.youtube.com/watch?v=p6cAFciZFNM",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:13",
+   "label": "Opening Hook",
+   "audio": "Why are you professional but have low income? Because you don't love sales. It took me 10 years to find the problem. Solving skills decide salary, but sales skills decide wealth height. I used to be an engineer and hated sales."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:13",
+   "timestamp_end": "0:15",
+   "label": "Problem Solving",
+   "audio": "Because I think they are oily and soulless."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:15",
+   "timestamp_end": "0:22",
+   "label": "Product Information",
+   "audio": "Until I saw top salespeople living easier and earning more. I realized we hate low-quality sales, not sales itself."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:22",
+   "timestamp_end": "0:26",
+   "label": "Product Selling Points",
+   "audio": "Income equals solving problems times sales. Sales is an amplifier."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:26",
+   "timestamp_end": "0:45",
+   "label": "Usage Scenarios",
+   "audio": "IBM started a sales school. No sales, no matter how good the tech, the company fails. AI is great but can't replace trust and love connection. Sales is your professional moat."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:45",
+   "timestamp_end": "0:47",
+   "label": "Real Experience",
+   "audio": "From engineer to top salesperson, it's about three steps."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:47",
+   "timestamp_end": "0:49",
+   "label": "Real Experience",
+   "audio": "First: precise positioning."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:49",
+   "timestamp_end": "0:55",
+   "label": "Product Selling Points",
+   "audio": "We use behavioral patterns to find talent frequency. Don't imitate others. Do yourself best."
+  },
+  {
+   "scene_number": 9,
+   "timestamp_start": "0:55",
+   "timestamp_end": "1:29",
+   "label": "Usage Scenarios",
+   "audio": "Second: rational sales. Rely on psychology and tools, not social drinking. Third: sales system. Turn sensibility to stories, rationality to process. Everyone sells—doctors, lawyers. Learn sales to live well."
+  },
+  {
+   "scene_number": 10,
+   "timestamp_start": "1:29",
+   "timestamp_end": "1:44",
+   "label": "Call to Action",
+   "audio": "I wrote a 3000-word article on my transition and introverts learning sales. Comment 'sales' for the link. Next I'll share how introverts become top sellers."
+  }
+ ]
+}

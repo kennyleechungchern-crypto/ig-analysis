@@ -1,0 +1,63 @@
+{
+ "id": "93d5e397-1265-4dea-8af5-f843ae4099e8",
+ "youtube_url": "https://www.youtube.com/watch?v=TBGNblLY4yQ",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:07",
+   "label": "Opening Hook",
+   "audio": "In 2026, TikTok published a global trend report. The conclusion is only one sentence: the era of impulsive consumption is over."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:07",
+   "timestamp_end": "0:13",
+   "label": "Problem Solving",
+   "audio": "Current customers, it's not that they don't buy things, they want to first understand one thing: why is this thing worth me spending this money?"
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:13",
+   "timestamp_end": "0:21",
+   "label": "Problem Solving",
+   "audio": "Have you met this type of customer? Obviously, there is a demand, a budget, and they also like the product, but they just don't place an order. You think they are waiting for a discount? No, they are waiting for you to give them a reason why it's worthwhile."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:21",
+   "timestamp_end": "0:30",
+   "label": "Real Experience",
+   "audio": "I once had a guest who chatted three times. Every question was asked. Finally, he told me, 'Tai Xin, I'm not unable to afford it, I just don't know why I should buy it.' This sentence woke me up."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:30",
+   "timestamp_end": "0:43",
+   "label": "Usage Scenarios",
+   "audio": "From that day on, I no longer communicated with clients about how good my products are or how strong the specifications are. I started asking one question: 'Sir, what do you most hope to solve? If solved, what would your life look like?' Let the customer describe that picture themselves."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:43",
+   "timestamp_end": "0:47",
+   "label": "Product Selling Points",
+   "audio": "When he sees that picture, he's not buying a product; he's buying for a better version of himself."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:47",
+   "timestamp_end": "1:00",
+   "label": "Product Selling Points",
+   "audio": "It's like a date. You won't like him just because he treated you to a cheap meal. You will like him because he makes you feel that the time spent with him is meaningful. Clients are not afraid of your trouble; they're afraid you're not worth it."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "1:00",
+   "timestamp_end": "1:11",
+   "label": "Call to Action",
+   "audio": "Clients are not afraid of you showing up; they're afraid you just want to make a deal. I am Tai Xin, helping you understand human nature and close high-value deals. Want to learn more about this logic? Join the sales community to learn more. Link in my bio."
+  }
+ ]
+}

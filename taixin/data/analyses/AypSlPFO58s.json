@@ -1,0 +1,42 @@
+{
+ "id": "845ce061-6457-4758-a2fb-eff687493ed7",
+ "youtube_url": "https://www.youtube.com/watch?v=AypSlPFO58s",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:08",
+   "label": "Opening Hook",
+   "audio": "Actually, there is a hole in the middle of your eye that is completely invisible. Your brain is deceiving you. I will let you see the moment the earth disappears in 10 seconds. Don't scroll away now, just follow along."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:08",
+   "timestamp_end": "0:15",
+   "label": "Usage Scenarios",
+   "audio": "Cover your left eye, stare at the magician, and slowly move your phone closer. Your eyes can't wander. Stop when it's about 10 centimeters away from your eyeball."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:15",
+   "timestamp_end": "0:23",
+   "label": "Product Selling Points",
+   "audio": "Did you see it? The earth just disappeared. This isn't magic; it is your brain automatically filling in the picture because it hates blanks, so it forces the world to look like what you want to see."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:23",
+   "timestamp_end": "0:38",
+   "label": "Product Selling Points",
+   "audio": "You've lived for 40 years and might never have known. Driving has blind spots, and thinking also has cognitive blind spots. You think the blind spot is in the eyes? But what's even scarier is the real blind spot is at the moment when you think you are absolutely right. The brain can even deceive the eyes; fabricating a memory is even easier."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:38",
+   "timestamp_end": "0:45",
+   "label": "Call to Action",
+   "audio": "If you saw the earth disappear, leave a 'surprised' comment, and then share it with your friends to test how much their brains can deceive them."
+  }
+ ]
+}
