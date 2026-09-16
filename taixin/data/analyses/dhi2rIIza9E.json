@@ -1,0 +1,70 @@
+{
+ "id": "30223b58-d941-47dd-b7b9-44ee20915597",
+ "youtube_url": "https://www.youtube.com/watch?v=dhi2rIIza9E",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:02",
+   "label": "Opening Hook",
+   "audio": "Evaluating a man is definitely not about seeing how he treats you; seeing how he treats you is useless."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:02",
+   "timestamp_end": "0:05",
+   "label": "Product Selling Points",
+   "audio": "Remember, if you flatter those in high positions, you will bully those beneath you. This is human nature."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:05",
+   "timestamp_end": "0:08",
+   "label": "Product Selling Points",
+   "audio": "This is called a mindset with a strong sense of self. So, I think the two best points for you to judge are..."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:08",
+   "timestamp_end": "0:11",
+   "label": "Usage Scenarios",
+   "audio": "First, look at his relationship with his parents. Does he often argue with them? Eat with his parents and see his attitude toward them."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:11",
+   "timestamp_end": "0:16",
+   "label": "Usage Scenarios",
+   "audio": "Then the second is when you're out, his attitude toward parking attendants, the police, or anyone of a lower social status than him."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:16",
+   "timestamp_end": "0:18",
+   "label": "Product Selling Points",
+   "audio": "I think this is the standard for judging a person."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:18",
+   "timestamp_end": "0:21",
+   "label": "Product Selling Points",
+   "audio": "Evaluating a man is definitely not about seeing how he treats you; seeing how he treats you is useless."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:21",
+   "timestamp_end": "0:23",
+   "label": "Real Experience",
+   "audio": "Men will do anything to make you happy just to win you over."
+  },
+  {
+   "scene_number": 9,
+   "timestamp_start": "0:23",
+   "timestamp_end": "0:26",
+   "label": "Call to Action",
+   "audio": "That's human nature."
+  }
+ ]
+}

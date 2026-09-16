@@ -1,0 +1,77 @@
+{
+ "id": "b8d7ec0c-dba3-4667-9e21-a8637e0476c3",
+ "youtube_url": "https://www.youtube.com/watch?v=zD7fAndCSCg",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:02",
+   "label": "Opening Hook",
+   "audio": "When a customer tells you it's too expensive, what's your first reaction?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:02",
+   "timestamp_end": "0:06",
+   "label": "Product Information",
+   "audio": "Calculate a discount for him? Then you're finished. 'Too expensive' has four meanings. Are you clear on which one it is?"
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:06",
+   "timestamp_end": "0:10",
+   "label": "Product Selling Points",
+   "audio": "First, he really doesn't have the budget. So what you need to do is not offer a discount, but to help him do the math."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:10",
+   "timestamp_end": "0:13",
+   "label": "Usage Scenarios",
+   "audio": "36,000 a year sounds like a lot, but 100 a day seems okay, right?"
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:13",
+   "timestamp_end": "0:16",
+   "label": "Product Selling Points",
+   "audio": "Second, he feels it's not worth it. It is definitely not a price issue, it's a trust issue."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:16",
+   "timestamp_end": "0:19",
+   "label": "Problem Solving",
+   "audio": "He doesn't trust you. Whatever you say, he discounts it."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:19",
+   "timestamp_end": "0:21",
+   "label": "Product Selling Points",
+   "audio": "At this time, what you need to supplement is not a discount, but trust."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:21",
+   "timestamp_end": "0:29",
+   "label": "Product Selling Points",
+   "audio": "Third, he is testing you. Experienced people are used to haggling. The more easily you lower the price, the more he feels your price is not genuine. If you hold your price, he respects you instead."
+  },
+  {
+   "scene_number": 9,
+   "timestamp_start": "0:29",
+   "timestamp_end": "0:33",
+   "label": "Usage Scenarios",
+   "audio": "Fourth, he doesn't even want to buy. 'Too expensive' is just his most convenient reason for rejection."
+  },
+  {
+   "scene_number": 10,
+   "timestamp_start": "0:33",
+   "timestamp_end": "0:49",
+   "label": "Call to Action",
+   "audio": "So what you should do is go back and pull his motivation, not deal with the price. Four situations have four solutions, but the underlying logic is only one. Customers don't believe because the product is good, but they start listening to how good the product is because they believe in you first. I'm Tai Xin, I'll take you through human nature to close high-value deals. Comment 'Too expensive' and I'll send you the full SOP."
+  }
+ ]
+}

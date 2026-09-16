@@ -1,0 +1,63 @@
+{
+ "id": "610fcd91-a2bd-49fa-a365-c876c33a57e3",
+ "youtube_url": "https://www.youtube.com/watch?v=plTHaBhpszE",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:01",
+   "timestamp_end": "0:06",
+   "label": "Opening Hook",
+   "audio": "Do you want to double your performance? Rely on hard work or rely on sales talk? Neither of them."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:06",
+   "timestamp_end": "0:17",
+   "label": "Product Selling Points",
+   "audio": "The key lies in only these two words: flexibility. Ordinary salespeople use their most habitual way to sell things, but top salespeople possess four types of personalities..."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:17",
+   "timestamp_end": "0:23",
+   "label": "Usage Scenarios",
+   "audio": "...and can say what the other person wants to hear based on the method that specific person wants. Facing D-type clients, they become experts, using professional and substantial methods to gain respect and solve the other party's problems."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:23",
+   "timestamp_end": "0:29",
+   "label": "Usage Scenarios",
+   "audio": "Facing I-type clients, they become leaders, using charisma and a sense of direction to guide the other party."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:29",
+   "timestamp_end": "0:35",
+   "label": "Usage Scenarios",
+   "audio": "Facing S-type clients, they become good friends, using encouragement, stimulation, and passion to make the other party buy."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:35",
+   "timestamp_end": "0:42",
+   "label": "Usage Scenarios",
+   "audio": "Facing analytical clients, they become patient and reliable partners, accompanying the other party step by step."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:42",
+   "timestamp_end": "0:45",
+   "label": "Product Selling Points",
+   "audio": "Change is progress, change is growth, not a sign of weakness or admission of defeat."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:45",
+   "timestamp_end": "0:53",
+   "label": "Call to Action",
+   "audio": "When you have these four styles, you can close deals with four types of clients, and your performance will naturally double. So, if you want to learn how to flexibly switch your roles, follow me."
+  }
+ ]
+}

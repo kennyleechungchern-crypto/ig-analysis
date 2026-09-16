@@ -1,0 +1,42 @@
+{
+ "id": "6f291e37-7f0b-43bf-bf1e-f23f85dab73e",
+ "youtube_url": "https://www.youtube.com/watch?v=rSyaSb1RX-M",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:02",
+   "timestamp_end": "0:10",
+   "label": "Product Selling Points",
+   "audio": "I think it should be said like this. We all want to grasp certainty. This is fundamentally a concept we have. We all want a kind of certainty. Which is that I must know you will live well."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:10",
+   "timestamp_end": "0:19",
+   "label": "Real Experience",
+   "audio": "But let's ask ourselves... Have you ever seen someone who was in the top three in elementary school or middle school, but doesn't seem to live any better than others after growing up? Right?"
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:19",
+   "timestamp_end": "0:25",
+   "label": "Real Experience",
+   "audio": "They went to a very good university, a national university, studied medicine. And then? After graduating from medical school, the person went crazy! (Laughs)"
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:25",
+   "timestamp_end": "0:30",
+   "label": "Product Selling Points",
+   "audio": "So you never know, is it really good that they study so well now? Not necessarily."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:30",
+   "timestamp_end": "0:38",
+   "label": "Product Selling Points",
+   "audio": "And more importantly, in the process of growing up, did they cultivate an ability? It's called the ability of antifragility."
+  }
+ ]
+}

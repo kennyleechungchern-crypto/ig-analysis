@@ -1,0 +1,70 @@
+{
+ "id": "c4c0b1a5-6a7e-4ef6-a969-38988e6185e8",
+ "youtube_url": "https://www.youtube.com/watch?v=2Zw4gkRs89I",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:12",
+   "label": "Opening Hook",
+   "audio": "Confidence isn't innate; it's five daily habits. Many say they lack the courage to speak. I tell them confidence is a habit, not a gift."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:12",
+   "timestamp_end": "0:23",
+   "label": "Product Selling Points",
+   "audio": "First, keep promises to yourself. If you commit to 10 calls, a book, or a run, finish it. Completing self-tasks builds true confidence."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:23",
+   "timestamp_end": "0:33",
+   "label": "Product Selling Points",
+   "audio": "Second, have principles without people-pleasing. If a client is a bad fit, honestly state the plan isn't suitable for them."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:33",
+   "timestamp_end": "0:40",
+   "label": "Usage Scenarios",
+   "audio": "Temporary pleasing doesn't buy long-term trust. Real sales come from principles and courage; clients respect honesty."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:40",
+   "timestamp_end": "0:56",
+   "label": "Product Selling Points",
+   "audio": "Third, consistently provide value. Don't chase or push; provide useful content. Your value speaks for you while others are still doubting."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:56",
+   "timestamp_end": "1:06",
+   "label": "Usage Scenarios",
+   "audio": "Fourth, accept rejection. Confident people know 'no' isn't a personal denial, just wrong timing. Every 'no' is one step closer to 'yes'."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "1:06",
+   "timestamp_end": "1:13",
+   "label": "Product Selling Points",
+   "audio": "Fifth, make others feel important. Remember small details like names, kids, or health issues discussed previously."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "1:13",
+   "timestamp_end": "1:20",
+   "label": "Usage Scenarios",
+   "audio": "True influence isn't making others think you're great, but making them feel seen and understood."
+  },
+  {
+   "scene_number": 9,
+   "timestamp_start": "1:20",
+   "timestamp_end": "1:39",
+   "label": "Call to Action",
+   "audio": "Influence is people choosing to follow you. Start with one habit. I'm Taixin. Comment 'Confidence' for my daily checklist."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "id": "eecfba1b-0e55-4796-af06-a4e90a199be7",
+ "youtube_url": "https://www.youtube.com/watch?v=jfI5oZPgc7U",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:02",
+   "label": "Opening Hook",
+   "audio": "The best salespeople don't start by talking about the product when they open their mouths. Do you know why?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:02",
+   "timestamp_end": "0:07",
+   "label": "Problem Solving",
+   "audio": "Because the average time a customer listens to you speak is only 3 seconds."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:08",
+   "timestamp_end": "0:11",
+   "label": "Usage Scenarios",
+   "audio": "Even shorter than the time it takes to cook instant noodles."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:12",
+   "timestamp_end": "0:21",
+   "label": "Problem Solving",
+   "audio": "You spent two whole hours traveling to see a customer, but the very first sentence you say is, 'Our company has a great promotion recently...' The customer's brain has already classified you as an advertisement and automatically skipped you."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:22",
+   "timestamp_end": "0:28",
+   "label": "Product Information",
+   "audio": "Why? Because people only stop for products related to themselves. So the opening hook shouldn't be about the product, but about what the customer is currently thinking."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:29",
+   "timestamp_end": "0:38",
+   "label": "Product Selling Points",
+   "audio": "I'll give you a formula: Opening Hook equals a user-related pain point plus a surprising data point or story. For example, if you sell insurance, instead of showing off the product, try saying it like this..."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:39",
+   "timestamp_end": "0:47",
+   "label": "Usage Scenarios",
+   "audio": "Last month, there was a small business owner just like you who almost had his company shut down for 3 months because of an unexpected accident. He later told me something very profound..."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:48",
+   "timestamp_end": "0:56",
+   "label": "Product Selling Points",
+   "audio": "When you say it this way, the customer will definitely ask, 'What did he say?' This way, you're not selling; you're initiating a dialogue."
+  },
+  {
+   "scene_number": 9,
+   "timestamp_start": "0:57",
+   "timestamp_end": "1:00",
+   "label": "Real Experience",
+   "audio": "Copy makes people understand instantly, voice makes people moved, and action makes people act. And the starting point for all of this is the first 3 seconds."
+  },
+  {
+   "scene_number": 10,
+   "timestamp_start": "1:01",
+   "timestamp_end": "1:07",
+   "label": "Call to Action",
+   "audio": "I'm the speaker. Helping you understand human nature and close high-value deals. Leave a comment with the words 'Opening Hook' and I'll send you an Opening Hook Formula Card."
+  }
+ ]
+}

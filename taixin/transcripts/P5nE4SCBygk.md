@@ -1,0 +1,21 @@
+# 2025年4月6日
+
+- 来源: https://www.youtube.com/watch?v=P5nE4SCBygk
+- 频道: @eintaixin  ·  播放: 1600  ·  时长: 约 108s
+- 转写方式: Higgsfield 视频分析（口播内容的英文转述，非中文逐字）· 2026-09-16
+
+## 口播内容（英文转述）
+
+Inside the store, the people coming in might be limited. So it's inevitable that you'll encounter situations where colleagues steal customers. How do you handle that personal relationship aspect? Oh, as for me, I'm actually quite passive in this regard. If you want to steal, we'll set rules first. So everyone, you must have game rules. In a company, no matter what it is... My logic is, sometimes we act as small team leaders. I might have five team members under me. Okay, today we need to take all the customers. Then you just take turns, one, two, three, four, five. Rules must be clearly stated beforehand. If you want to steal, there's no way to steal. Rules must be set first. But there will always be people playing dirty tricks. What kind of dirty tricks? 'I just served that one, they didn't buy. I served that one, they didn't leave info, so it doesn't count.' No such thing as 'doesn't count.' That's just your luck. Right? If you serve one, as long as you've talked to one customer, that counts as one. Regardless of whether you want them or not. So even if they didn't leave info, you have to switch to the next one. So we clarify the rules first. When you and another colleague are fighting over the same customer, and ultimately this salesperson wants to take your commission away, actually, I would let them have it. I personally would let them have it. Why? I would think, you're working so hard, here, have it. Because I can find many more customers. Why do people cling to certain things? Because you lack it. Then how can I not cling to this? Because I have plenty. I have a list of 1,800 people. I don't care about this one. I think this is confidence. You want it? I'll give it to you, because I don't care about this one. But because you have no customers, you need it, because you have to take care of your family. It's fine. Helping others is also beauty. Right, this is my view. I don't need to fight.
+
+## 分段
+
+- [   0s–   9s] (Opening Hook) Inside the store, the people coming in might be limited. So it's inevitable that you'll encounter situations where colleagues steal customers. How do you handle that personal relationship aspect?
+- [   9s–  20s] (Problem Solving) Oh, as for me, I'm actually quite passive in this regard. If you want to steal, we'll set rules first. So everyone, you must have game rules. In a company, no matter what it is...
+- [  20s–  30s] (Problem Solving) My logic is, sometimes we act as small team leaders. I might have five team members under me. Okay, today we need to take all the customers. Then you just take turns, one, two, three, four, five.
+- [  30s–  44s] (Problem Solving) Rules must be clearly stated beforehand. If you want to steal, there's no way to steal. Rules must be set first. But there will always be people playing dirty tricks. What kind of dirty tricks? 'I just served that one, they didn't buy. I served that one, they didn't leave info, so it doesn't count.'
+- [  44s–  58s] (Problem Solving) No such thing as 'doesn't count.' That's just your luck. Right? If you serve one, as long as you've talked to one customer, that counts as one. Regardless of whether you want them or not.
+- [  58s–  72s] (Real Experience) So even if they didn't leave info, you have to switch to the next one. So we clarify the rules first. When you and another colleague are fighting over the same customer, and ultimately this salesperson wants to take your commission away, actually, I would let them have it.
+- [  72s–  87s] (Real Experience) I personally would let them have it. Why? I would think, you're working so hard, here, have it. Because I can find many more customers. Why do people cling to certain things? Because you lack it.
+- [  87s– 100s] (Real Experience) Then how can I not cling to this? Because I have plenty. I have a list of 1,800 people. I don't care about this one. I think this is confidence. You want it? I'll give it to you, because I don't care about this one.
+- [ 100s– 108s] (Real Experience) But because you have no customers, you need it, because you have to take care of your family. It's fine. Helping others is also beauty. Right, this is my view. I don't need to fight.

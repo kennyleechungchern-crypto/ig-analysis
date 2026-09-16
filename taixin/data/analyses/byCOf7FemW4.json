@@ -1,0 +1,63 @@
+{
+ "id": "8be18657-d0c2-469a-a334-020bc68648b8",
+ "youtube_url": "https://www.youtube.com/watch?v=byCOf7FemW4",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:03",
+   "label": "Opening Hook",
+   "audio": "If you have friends in sales, don't let them see this video, otherwise their sales results will be too good."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:03",
+   "timestamp_end": "0:23",
+   "label": "Real Experience",
+   "audio": "I once had a customer come to the showroom to see a Cayenne. He touched the steering wheel and said, 'I'll think about it.' Most salespeople would wait, but I didn't. On the third day, I sent him a message. I didn't ask how he was thinking; I said, 'You mentioned wanting to take your family out. This Sunday we have a family test drive; do you want to come?' On the seventh day, I shared a story about a father who just took delivery of his car."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:23",
+   "timestamp_end": "0:26",
+   "label": "Real Experience",
+   "audio": "When he took delivery, his son sat in it and said, 'Dad, you look so cool!'"
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:26",
+   "timestamp_end": "0:30",
+   "label": "Real Experience",
+   "audio": "On the fourteenth day, I invited him for coffee. We didn't talk about cars; we talked about problems in his industry."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:30",
+   "timestamp_end": "0:37",
+   "label": "Real Experience",
+   "audio": "On the twenty-first day, he brought his wife. She was wearing red. As soon as she sat in the Cayenne, I said, 'We can choose a red interior. If you like it, we can go with that.'"
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:37",
+   "timestamp_end": "0:51",
+   "label": "Problem Solving",
+   "audio": "As a result, the deal was closed that day. Look, I never pressured him once, but I planned every step in advance, just like navigation. You set a destination, but if you never look at traffic updates, you won't get there."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:51",
+   "timestamp_end": "0:57",
+   "label": "Problem Solving",
+   "audio": "So you should go back and check those clients who are still 'considering.' Are they really considering, or are you just waiting for something?"
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:57",
+   "timestamp_end": "1:07",
+   "label": "Call to Action",
+   "audio": "Comment with the word 'steps,' and I'll send you a sales step tracking sheet. Open it every day, and you'll know who to contact. I am Taixin, helping you understand human nature and close high-value deals."
+  }
+ ]
+}

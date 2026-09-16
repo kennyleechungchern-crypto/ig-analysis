@@ -1,0 +1,56 @@
+{
+ "id": "345a7d2b-5267-43a6-ab90-8eecb8c9bacf",
+ "youtube_url": "https://www.youtube.com/watch?v=NY_C7b-AP_Y",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:06",
+   "label": "Opening Hook",
+   "audio": "Have you noticed that many people read books, go to classes, and watch lectures every day, but in the end, they haven't become powerful? What exactly is the problem?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:06",
+   "timestamp_end": "0:11",
+   "label": "Product Information",
+   "audio": "Hi everyone, I am Li Taixin. I was once a top 100 sales consultant for Porsche worldwide, specializing in solving your sales problems."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:11",
+   "timestamp_end": "0:17",
+   "label": "Problem Solving",
+   "audio": "Do you know? Some people have read 100 books, but the result is the same as not reading. This is like always going to the gym, but only taking pictures every time and not exercising. Of course, there are no results."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:17",
+   "timestamp_end": "0:25",
+   "label": "Product Selling Points",
+   "audio": "Research shows that within 72 hours after humans learn, if there is no application, about 80% of the content will probably be forgotten. That is to say, learning without doing is equivalent to learning for nothing."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:25",
+   "timestamp_end": "0:30",
+   "label": "Product Selling Points",
+   "audio": "Charlie Munger said that learning is compound interest. The key is not how much you can read, but whether it can become your habit."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:30",
+   "timestamp_end": "0:36",
+   "label": "Usage Scenarios",
+   "audio": "So whatever you have learned, you must use it within three days, otherwise you haven't learned it at all. You even have to teach it to others to represent that you have truly learned it."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:36",
+   "timestamp_end": "0:41",
+   "label": "Call to Action",
+   "audio": "If you like my video, please follow me. Sales power won't fail you, because you've never met Li Taixin. Bye bye."
+  }
+ ]
+}

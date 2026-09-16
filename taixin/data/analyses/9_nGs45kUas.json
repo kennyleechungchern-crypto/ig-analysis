@@ -1,0 +1,63 @@
+{
+ "id": "5a8cf215-cd6f-4a39-a360-3caf09b30596",
+ "youtube_url": "https://www.youtube.com/watch?v=9_nGs45kUas",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:02",
+   "label": "Opening Hook",
+   "audio": "It turns out everything is a re-occurrence of a scenario. What are your principles?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:02",
+   "timestamp_end": "0:04",
+   "label": "Product Selling Points",
+   "audio": "You must set your principles."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:04",
+   "timestamp_end": "0:08",
+   "label": "Product Selling Points",
+   "audio": "Because if you haven't set your principles, I can guarantee you your problems will continue to recur."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:08",
+   "timestamp_end": "0:13",
+   "label": "Problem Solving",
+   "audio": "Because all the pain in life is called scenario re-occurrence, rather than something fresh."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:13",
+   "timestamp_end": "0:20",
+   "label": "Problem Solving",
+   "audio": "If you don't believe me, ask yourself, is your pain happening repeatedly every day, or is everything you encounter the freshest thing every day?"
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:20",
+   "timestamp_end": "0:26",
+   "label": "Real Experience",
+   "audio": "It should be occurring repeatedly, right? Arguments also happen repeatedly, right? The pressure from your boss also happens repeatedly, right?"
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:26",
+   "timestamp_end": "0:33",
+   "label": "Real Experience",
+   "audio": "Right? Pressure from friends also happens repeatedly, and betrayal by friends also happens repeatedly, and negative comments on Threads also happen repeatedly."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:33",
+   "timestamp_end": "0:37",
+   "label": "Product Selling Points",
+   "audio": "But until the day you set your principles, it will stop."
+  }
+ ]
+}
