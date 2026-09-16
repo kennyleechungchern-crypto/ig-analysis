@@ -1,0 +1,10 @@
+{
+  "name": "泰欣老师（李泰欣）",
+  "youtube": [
+    {"handle": "eintaixin", "label": "李泰欣銷售導師（主频道）", "tabs": ["shorts", "videos"]},
+    {"handle": "mr.taixinsales", "label": "泰欣哥教銷售（副频道）", "tabs": ["shorts"]}
+  ],
+  "instagram": [
+    {"handle": "eintaixin", "note": "IG reels 与 YouTube shorts 是同一批内容；IG 需要 cookies 才能抓，默认只走 YouTube"}
+  ]
+}
