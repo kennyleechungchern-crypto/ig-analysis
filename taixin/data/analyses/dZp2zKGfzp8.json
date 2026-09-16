@@ -1,0 +1,63 @@
+{
+ "id": "342d2757-fddd-4f03-8ff3-fb9a2d3dd2c2",
+ "youtube_url": "https://www.youtube.com/watch?v=dZp2zKGfzp8",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:10",
+   "label": "Opening Hook",
+   "audio": "Can testimonial examples be fully trusted? Experience cannot be duplicated. The reason is that the human brain has a mechanism that easily falls into the placebo effect and the issue of brain activity."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:10",
+   "timestamp_end": "0:18",
+   "label": "Usage Scenarios",
+   "audio": "When I was a child, we lived in the countryside of Miaoli. Every week, my grandmother would take me to the temple. A small truck would drive in, and they would start performing."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:18",
+   "timestamp_end": "0:26",
+   "label": "Product Information",
+   "audio": "They would start talking about who took this 'universal medicine' and got cured. Cancer was cured, diabetes was cured, high blood pressure was cured, and even asthma was cured."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:26",
+   "timestamp_end": "0:32",
+   "label": "Product Information",
+   "audio": "So my grandmother bought several bottles of medicine. It wasn't until I got home that I realized I had taken it for two weeks and nothing had changed, and the medicine was very expensive."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:32",
+   "timestamp_end": "0:58",
+   "label": "Product Selling Points",
+   "audio": "Why do I care so much that testimonial cases cannot be used as a basis for argument? The reason lies in the placebo effect. Perhaps 70% of diseases in the human body will heal naturally. So as long as I make a miracle medicine for you and give it to 100 people, 70 people will get better after taking it. Then you will think my medicine is miraculous, but in fact, what I prescribed was just Vitamin C. This is the placebo effect. Therefore, the placebo effect cannot be used as a basis for argument. The second is the issue of brain activity."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:58",
+   "timestamp_end": "1:08",
+   "label": "Usage Scenarios",
+   "audio": "For example, if you are researching a car today, looking at a BMW for a long time, and after three months of research, you have analyzed all the data and fuel consumption. You decide to buy a BMW."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "1:08",
+   "timestamp_end": "1:13",
+   "label": "Real Experience",
+   "audio": "As a result, the day before you buy it, you hear your friend say that he bought a BMW that was terrible, and the new car was repaired 30 times in three months."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "1:13",
+   "timestamp_end": "1:30",
+   "label": "Call to Action",
+   "audio": "Then you most likely won't buy it. The brain is called a cognitive miser. A cognitive miser means it will use the least amount of energy to come up with a conclusion. The less energy the brain consumes, the longer you will survive in primitive society. We will only look at the most obvious case."
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "id": "8ba0c15c-a5a4-4dd2-a1f0-a9fe040b1d68",
+ "youtube_url": "https://www.youtube.com/watch?v=6yLS0yrVqQ0",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:02",
+   "timestamp_end": "0:07",
+   "label": "Product Information",
+   "audio": "Once you pass this standard, will I be happier next week than I am today? If not, please break up early."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:07",
+   "timestamp_end": "0:14",
+   "label": "Product Selling Points",
+   "audio": "There are 8 billion people in the world, at least 20,000 are super suitable for you. This is a statistic. So you can definitely find a more suitable person by looking around."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:14",
+   "timestamp_end": "0:21",
+   "label": "Usage Scenarios",
+   "audio": "Of course, it's not like you keep picking these people. In a relationship, you must work hard because no one is a 100% match."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:21",
+   "timestamp_end": "0:31",
+   "label": "Problem Solving",
+   "audio": "So we must understand the other party through tools, through DISC, through behavioral pattern science to understand what the other party wants, what they want to hear. This is providing emotional value to the other party."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:31",
+   "timestamp_end": "0:39",
+   "label": "Real Experience",
+   "audio": "But if not, if both people don't want to try anymore, then it's better to break up early. If both people only care about themselves, it's better to break up early."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:39",
+   "timestamp_end": "0:43",
+   "label": "Product Selling Points",
+   "audio": "Because in a relationship, you have to think about the other person, never yourself."
+  }
+ ]
+}

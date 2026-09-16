@@ -1,0 +1,63 @@
+{
+ "id": "2a7f735f-40e4-4820-b4b1-480a63e85e04",
+ "youtube_url": "https://www.youtube.com/watch?v=5uVYz2TZxGk",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:08",
+   "label": "Opening Hook",
+   "audio": "AI is getting stronger and stronger. Will sales agents be replaced? My answer is yes, but also no. Those who will be replaced are the sales agents who only memorize scripts to transmit product information and do repetitive work."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:08",
+   "timestamp_end": "0:13",
+   "label": "Problem Solving",
+   "audio": "Because AI does these things 10 times faster than you. Do you want to compete with it on efficiency? You can't win."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:13",
+   "timestamp_end": "0:18",
+   "label": "Product Selling Points",
+   "audio": "But what will not be replaced is the sales agent who understands human nature. Because AI can't do one thing: make customers trust you."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:18",
+   "timestamp_end": "0:21",
+   "label": "Usage Scenarios",
+   "audio": "Where does trust come from? It's because you remember his daughter has an exam,"
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:21",
+   "timestamp_end": "0:29",
+   "label": "Usage Scenarios",
+   "audio": "It's when he's hesitant, you tell him, 'It's okay, take your time, I'll wait for you.' It's the relationship you've built up bit by bit over three years. See the essence through the phenomenon,"
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:29",
+   "timestamp_end": "0:41",
+   "label": "Product Information",
+   "audio": "catch the trend through the essence. The essence is human nature, the trend is AI. AI can't simulate human nature. So the real question to ask is not whether AI will replace me, but whether I can use AI to amplify my ability."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:41",
+   "timestamp_end": "0:45",
+   "label": "Product Information",
+   "audio": "AI is an amplifier. If your structure is clear, it will give you a gold mine. If your structure is vague, it will give you nonsense."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:45",
+   "timestamp_end": "0:59",
+   "label": "Call to Action",
+   "audio": "So I've prepared an upgrade guide for sales agents in the AI era. Leave a comment with 'AI' and I'll send it to you. Don't fear AI, fear that you don't have a structure to let AI help you. I am Taixin, I will take you to understand human nature and close high-value deals."
+  }
+ ]
+}

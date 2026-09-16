@@ -1,0 +1,77 @@
+{
+ "id": "1dcf4d77-f90a-4679-ade3-4b53a9a0c325",
+ "youtube_url": "https://www.youtube.com/watch?v=T06vm3A4by0",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:04",
+   "label": "Opening Hook",
+   "audio": "What do you call true death? Do you know?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:04",
+   "timestamp_end": "0:10",
+   "label": "Product Selling Points",
+   "audio": "Some people say, when you give up on yourself, that is true death."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:10",
+   "timestamp_end": "0:16",
+   "label": "Product Selling Points",
+   "audio": "Some people say, when you no longer have a heartbeat or breath, that is true death."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:16",
+   "timestamp_end": "0:23",
+   "label": "Real Experience",
+   "audio": "But I think a saying is very true: When all the people in the world forget about you, that is the true death."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:23",
+   "timestamp_end": "0:28",
+   "label": "Product Information",
+   "audio": "So I started a company. I want to let this brand spirit remain in this world."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:28",
+   "timestamp_end": "0:34",
+   "label": "Usage Scenarios",
+   "audio": "I started teaching my sales formula. I want to let the sales formula improve everyone's lives and remain in this world."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:34",
+   "timestamp_end": "0:41",
+   "label": "Usage Scenarios",
+   "audio": "I started writing down my thoughts and ideas on the internet every day, just to leave a little bit of myself in this world."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:41",
+   "timestamp_end": "0:47",
+   "label": "Problem Solving",
+   "audio": "We work so hard today, isn't it just to leave a mark on the earth and let people remember us?"
+  },
+  {
+   "scene_number": 9,
+   "timestamp_start": "0:47",
+   "timestamp_end": "0:56",
+   "label": "Problem Solving",
+   "audio": "Death is not scary, do you know? The most scary thing is that we worked hard to live for 80 years, but didn't leave a single trace of value to prove we lived."
+  },
+  {
+   "scene_number": 10,
+   "timestamp_start": "0:56",
+   "timestamp_end": "1:01",
+   "label": "Call to Action",
+   "audio": "Finally, I give this sentence to everyone. Let's think about whether death is scary or not."
+  }
+ ]
+}

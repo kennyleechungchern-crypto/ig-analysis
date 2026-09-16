@@ -1,0 +1,35 @@
+{
+ "id": "da84c89c-d3a5-40f1-8648-299397f0232a",
+ "youtube_url": "https://www.youtube.com/watch?v=pVRrjuivSxg",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:01",
+   "timestamp_end": "0:11",
+   "label": "Product Selling Points",
+   "audio": "So what you're actually selling is the visualization. Sell the idea that if you start working out now, in March, you'll be at the beach in June."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:11",
+   "timestamp_end": "0:13",
+   "label": "Usage Scenarios",
+   "audio": "You can show off your muscles and wear the bikini you've wanted."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:13",
+   "timestamp_end": "0:28",
+   "label": "Product Selling Points",
+   "audio": "This is the point we need to remind them of. At this moment, give them appropriate pressure to make them realize time is running out. If you start in May, it might be too late."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:28",
+   "timestamp_end": "0:41",
+   "label": "Product Selling Points",
+   "audio": "This is human loss aversion. They want to look good for that specific time. Make the customer realize the cost of procrastination. Think about helping them see the consequences of not buying."
+  }
+ ]
+}

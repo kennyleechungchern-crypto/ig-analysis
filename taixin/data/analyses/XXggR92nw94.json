@@ -1,0 +1,56 @@
+{
+ "id": "30324eaa-5683-4147-9287-c650ca21bdc0",
+ "youtube_url": "https://www.youtube.com/watch?v=XXggR92nw94",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:03",
+   "label": "Opening Hook",
+   "audio": "Sales needs to make money, but make money that lets you sleep at night. You must collect the earnest money; you definitely must."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:03",
+   "timestamp_end": "0:11",
+   "label": "Product Selling Points",
+   "audio": "Why must I collect it? Because this is the establishment of trust. He is willing to sign and give money. On a psychological level, it's the principle of commitment and consistency. I have already commissioned you to work for me, so if you can collect it, you must."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:11",
+   "timestamp_end": "0:19",
+   "label": "Problem Solving",
+   "audio": "But the premise must be stated beforehand: 'Sir, your offer of 400 is really too low. I think this case might have a 90% chance of not closing.'"
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:19",
+   "timestamp_end": "0:26",
+   "label": "Usage Scenarios",
+   "audio": "But I am willing to work hard for you. You need to lower your expectations. What your boss cares about is you making empty promises to the client."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:26",
+   "timestamp_end": "0:35",
+   "label": "Real Experience",
+   "audio": "I am not trying to cheat you of the earnest money. I am not pretending that I can get this case or that I can negotiate this deal. What I am teaching you is to reflect and ask your own heart: were you lying just now?"
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:35",
+   "timestamp_end": "0:48",
+   "label": "Product Selling Points",
+   "audio": "We are speaking normal words, but at the same time we can lower expectations and show that we are very passionate and proactive. Even if it is not successful, doesn't the client still think you are a good salesperson? Even if this one doesn't close, is there a chance they will help you with referrals in the future? There is a chance."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:48",
+   "timestamp_end": "0:50",
+   "label": "Call to Action",
+   "audio": "What he needs to see is your heart."
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "id": "85952c64-afcd-4701-988b-52fbff334373",
+ "youtube_url": "https://www.youtube.com/watch?v=GB1_oUkjHDo",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:02",
+   "label": "Opening Hook",
+   "audio": "If you have no value, all you're left with is price."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:02",
+   "timestamp_end": "0:08",
+   "label": "Product Selling Points",
+   "audio": "So if you think you're the most professional salesperson and rely on this to sell things, congratulations, you look exactly like everyone else."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:08",
+   "timestamp_end": "0:10",
+   "label": "Product Selling Points",
+   "audio": "Professionalism isn't your specialty, professionalism is your baseline."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:10",
+   "timestamp_end": "0:13",
+   "label": "Product Selling Points",
+   "audio": "I ask you, is there anyone here who isn't professional? Absolutely not, right?"
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:13",
+   "timestamp_end": "0:17",
+   "label": "Problem Solving",
+   "audio": "Then who should I buy from? I can only buy from the cheapest one."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:17",
+   "timestamp_end": "0:22",
+   "label": "Usage Scenarios",
+   "audio": "Because in the eyes of the customer, you all look the same, so he can only look for the cheapest. This is how value turns into price."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:22",
+   "timestamp_end": "0:30",
+   "label": "Problem Solving",
+   "audio": "If you have no value, all you're left with is price. This is how value turns into price. (repeated)"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "id": "9788b73a-5653-4959-9c64-4bd88e0c53ab",
+ "youtube_url": "https://www.youtube.com/watch?v=H_Ect59mH7c",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:07",
+   "label": "Opening Hook",
+   "audio": "Heting is the number one pharmaceutical sales rep for two consecutive years. He is not only number one; his total sales in 2025 grew by 53% compared to 2024. How did he do it?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:07",
+   "timestamp_end": "0:13",
+   "label": "Usage Scenarios",
+   "audio": "Let me give you an example. Last month I consecutively developed new client clinics for five days, and closed the deals on the spot every day."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:13",
+   "timestamp_end": "0:26",
+   "label": "Product Selling Points",
+   "audio": "I used the transaction map from Teacher Taixin, then established the customer's first impression. I will ask colleagues about the customer's preferences, for example, coffee."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:26",
+   "timestamp_end": "0:41",
+   "label": "Product Selling Points",
+   "audio": "The second point is that I will find the core problems of the customer. Using closed and open-ended techniques, or items that the clinic has for self-payment, I will focus on this problem to explain to him, then combine Teacher Taixin's most powerful..."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:41",
+   "timestamp_end": "0:55",
+   "label": "Product Information",
+   "audio": "...DISC. This is a method I've used many times. DISC has four personality types to analyze, like a D-type boss who is profit-oriented. I use the law of advantages and disadvantages to make the deal on the spot."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:55",
+   "timestamp_end": "1:06",
+   "label": "Real Experience",
+   "audio": "I think doing sales becomes easier and easier, allowing me to have more time to spend with my family, and even more time for myself to do what I like. Sales is attraction, not promotion. I strongly agree with what Brother Taixin said."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "1:06",
+   "timestamp_end": "1:16",
+   "label": "Real Experience",
+   "audio": "So, combining the three points above, I achieved the number one result in Taiwan for two consecutive years. Many thanks to Teacher Taixin."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "1:16",
+   "timestamp_end": "1:40",
+   "label": "Call to Action",
+   "audio": "I think Heting set a great example for us. Because experience without theory will make your experience incoherent. If practical experience has no theory, theory becomes irrelevant. Heting can truly apply theory to practice, no wonder you can be number one for two years and work easier. We look forward to your development in 2026. Bye-bye."
+  }
+ ]
+}

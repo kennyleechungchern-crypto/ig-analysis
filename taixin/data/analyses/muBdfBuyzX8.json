@@ -1,0 +1,56 @@
+{
+ "id": "86be12d2-84c3-41e5-ae05-9af9c9a55da1",
+ "youtube_url": "https://www.youtube.com/watch?v=muBdfBuyzX8",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:02",
+   "timestamp_end": "0:13",
+   "label": "Product Information",
+   "audio": "Is there a kind of person around you who gets whatever they want? Do you think they're just lucky? Actually, they understand human nature."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:13",
+   "timestamp_end": "0:18",
+   "label": "Product Selling Points",
+   "audio": "People who get what they want have a talent: they can quickly identify who the other person is and communicate in a way that person likes. They know how to give D-types a big picture and vision..."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:18",
+   "timestamp_end": "0:23",
+   "label": "Product Selling Points",
+   "audio": "...because D-types are goal-oriented pioneers. They know how to make friends with I-types and praise them..."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:23",
+   "timestamp_end": "0:28",
+   "label": "Product Selling Points",
+   "audio": "...because I-types crave recognition. They know how to take it slow with S-types and provide patience and security..."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:28",
+   "timestamp_end": "0:34",
+   "label": "Product Selling Points",
+   "audio": "...because S-types need a sense of security. They know to show C-types data and logic because C-types value the correctness of procedures."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:34",
+   "timestamp_end": "0:42",
+   "label": "Product Selling Points",
+   "audio": "So these people don't have magic; they just understand that those who are unwilling to understand others will spend their lives working for those who understand themselves."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:42",
+   "timestamp_end": "0:49",
+   "label": "Call to Action",
+   "audio": "If you want to be someone who gets what they want, start by understanding human nature. Follow me, and I'll teach you the DISC behavioral patterns."
+  }
+ ]
+}

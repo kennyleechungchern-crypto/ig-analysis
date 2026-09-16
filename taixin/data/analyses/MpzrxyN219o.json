@@ -1,0 +1,56 @@
+{
+ "id": "724ed122-08ce-422b-b1e6-333ad00f0051",
+ "youtube_url": "https://www.youtube.com/watch?v=MpzrxyN219o",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:05",
+   "label": "Opening Hook",
+   "audio": "As long as you remember these three, I can guarantee you will lead a good life in the future. Okay?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:05",
+   "timestamp_end": "0:12",
+   "label": "Product Information",
+   "audio": "The three most important abilities for work: the first is flexibility, the second is accumulation, and the third is understanding human nature."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:12",
+   "timestamp_end": "0:19",
+   "label": "Product Selling Points",
+   "audio": "What is flexibility? When you are being criticized by others, don't care about what others say; do whatever you want, right?"
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:19",
+   "timestamp_end": "0:28",
+   "label": "Problem Solving",
+   "audio": "Flexibility is the ability to be anti-fragile. There is a book called 'Antifragile' written by Taleb. What is anti-fragility? Many people say that living in society, we all have to be very tough and hard."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:28",
+   "timestamp_end": "0:35",
+   "label": "Usage Scenarios",
+   "audio": "So what is anti-fragility? Like under great pressure, you throw a ping pong ball down hard. Will it bounce back? It will."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:35",
+   "timestamp_end": "0:45",
+   "label": "Real Experience",
+   "audio": "So what you need to cultivate is the flexibility of life. When work gives you pressure, you need to bounce back and surpass it."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:45",
+   "timestamp_end": "0:53",
+   "label": "Call to Action",
+   "audio": "This is the ability you need to cultivate in your life. It's not about saying 'I'm very strong,' 'I can endure,' or 'I'm easily wronged.' That's not being powerful. Truly powerful people possess flexibility."
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "id": "a8f868f2-f02b-459e-8678-c642eab670ad",
+ "youtube_url": "https://www.youtube.com/watch?v=loQwjyrbdGI",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:02",
+   "label": "Opening Hook",
+   "audio": "Have you ever wondered why some groups and organizations can brainwash even smart people and make them deeply involved?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:02",
+   "timestamp_end": "0:10",
+   "label": "Problem Solving",
+   "audio": "Don't think you're immune; perhaps you're currently in a state influenced by multiple psychological mechanisms."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:10",
+   "timestamp_end": "0:16",
+   "label": "Product Information",
+   "audio": "Hi everyone, I'm Li Taixin, formerly a Top 100 Global Sales Consultant for Porsche. My goal is to help all sales consultants live a more relaxed life."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:16",
+   "timestamp_end": "0:25",
+   "label": "Product Selling Points",
+   "audio": "Just like a spider web, they don't use just one thread to stick to you, but seven or eight threads simultaneously. You might break free from one but overlook the others pulling at you."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:25",
+   "timestamp_end": "0:34",
+   "label": "Product Selling Points",
+   "audio": "Psychological research shows that when multiple factors like cognitive bias, social proof, and authority effects are layered together, the probability of people making irrational choices is very, very high."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:34",
+   "timestamp_end": "0:41",
+   "label": "Product Selling Points",
+   "audio": "Charlie Munger said that when multiple biases emerge at once, you must have the ability to see through them, or you'll be led by the nose."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:41",
+   "timestamp_end": "0:48",
+   "label": "Product Selling Points",
+   "audio": "When facing any organization with over-promises, exaggerated publicity, or only a single source of information, you must keep your eyes peeled and verify from multiple sides."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:48",
+   "timestamp_end": "0:52",
+   "label": "Call to Action",
+   "audio": "Quickly share this with the friends around you. Don't let the Lollapalooza effect lead you away. Bye-bye."
+  }
+ ]
+}

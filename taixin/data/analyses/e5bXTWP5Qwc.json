@@ -1,0 +1,49 @@
+{
+ "id": "afd1cf3e-1a28-44c9-a2f5-6afe193d02ae",
+ "youtube_url": "https://www.youtube.com/watch?v=e5bXTWP5Qwc",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:02",
+   "timestamp_end": "0:08",
+   "label": "Problem Solving",
+   "audio": "Female voice: Taixin-ge, if customers say our things are too expensive today, how should we overcome their resistance?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:08",
+   "timestamp_end": "0:15",
+   "label": "Product Selling Points",
+   "audio": "Let's first ask this: Is it inevitable that customers say it's too expensive? So when a customer says it's expensive, can you immediately lower the price?"
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:15",
+   "timestamp_end": "0:23",
+   "label": "Product Selling Points",
+   "audio": "No. It's the customer's right to ask; they want to know if there's a promotion. But if your price is fixed, you don't need to be afraid of quoting."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:23",
+   "timestamp_end": "0:30",
+   "label": "Product Selling Points",
+   "audio": "Say 'Sorry, our price is indeed fixed.' So when a customer says your price is high, they need a reason, not a price cut."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:30",
+   "timestamp_end": "0:45",
+   "label": "Product Selling Points",
+   "audio": "But why do many salespeople only have one trick—lowering the price? They think customers just want it cheap. No, because they didn't give any reason. As a salesperson, including our company's FAB principle, have you designed it well?"
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:45",
+   "timestamp_end": "0:54",
+   "label": "Product Selling Points",
+   "audio": "If you haven't designed these well, you absolutely have no qualification to lower the price for the customer. What you need is to state your value. You need to understand the customer's needs. When a customer says it's expensive, your first step is to stabilize the price, not lower it."
+  }
+ ]
+}

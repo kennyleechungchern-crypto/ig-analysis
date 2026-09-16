@@ -1,0 +1,49 @@
+{
+ "id": "e7a93d5c-a5e6-40b7-91e5-6c67d995e8f3",
+ "youtube_url": "https://www.youtube.com/watch?v=Q798ckphUfU",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:02",
+   "label": "Opening Hook",
+   "audio": "There is no such thing as educating customers."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:02",
+   "timestamp_end": "0:10",
+   "label": "Product Selling Points",
+   "audio": "If he thinks he can educate customers, I can guarantee he is only hitting that 20% of people. Do you agree?"
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:10",
+   "timestamp_end": "0:14",
+   "label": "Real Experience",
+   "audio": "Let me ask you, do you want to be educated? Does anyone want to be educated? No!"
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:14",
+   "timestamp_end": "0:21",
+   "label": "Problem Solving",
+   "audio": "As a sales teacher, how can you say such things? How can you keep using rhetoric to deceive others, to trick others and put pressure on them to buy?"
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:21",
+   "timestamp_end": "0:34",
+   "label": "Product Selling Points",
+   "audio": "You need to know who he is! So customers cannot be educated. Customers need your recognition, then you implant new evidence, and finally his brain concludes that he wants to buy from you. This is called selling."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:34",
+   "timestamp_end": "0:42",
+   "label": "Product Information",
+   "audio": "Everyone, what you learn now is different from before. Everyone tells you to educate customers, everyone is teaching you rhetoric, but I can tell you if you understand psychology, you wouldn't say this to me."
+  }
+ ]
+}
