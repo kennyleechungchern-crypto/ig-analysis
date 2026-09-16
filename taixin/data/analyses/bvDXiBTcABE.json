@@ -1,0 +1,70 @@
+{
+ "id": "e4b85eef-8c27-476a-a29f-15b2680ecb03",
+ "youtube_url": "https://www.youtube.com/watch?v=bvDXiBTcABE",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:03",
+   "label": "Opening Hook",
+   "audio": "Ninety-two percent of salespeople have given up by the time the customer is ready to say yes."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:03",
+   "timestamp_end": "0:11",
+   "label": "Product Information",
+   "audio": "Many international sales reports indicate that eighty percent of transactions occur after the fifth contact. But ninety-two percent of salespeople have already given up by the fourth time. There are even forty-eight percent of people who haven't even done the first follow-up."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:11",
+   "timestamp_end": "0:23",
+   "label": "Problem Solving",
+   "audio": "Think about it, it's not that the customer isn't replying to your messages, it's that you've already mentally sentenced them to death. 'Ah, forget it, he probably won't buy, I don't want to bother others.'"
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:23",
+   "timestamp_end": "0:26",
+   "label": "Problem Solving",
+   "audio": "But have you ever thought, it's not that the customer doesn't want you, it's that you gave up on the customer first."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:26",
+   "timestamp_end": "0:36",
+   "label": "Real Experience",
+   "audio": "When I was leading a team before, there was a newcomer whose performance was always at the bottom. I asked him, how many times have you followed up with your customers? He said mostly once, some twice. I said, then you're not selling, you're testing your luck."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:36",
+   "timestamp_end": "0:44",
+   "label": "Usage Scenarios",
+   "audio": "Later, I had him do one thing: contact every customer at least five times before making a judgment. It's not about pushing every time, but giving them something useful each time."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:44",
+   "timestamp_end": "0:55",
+   "label": "Usage Scenarios",
+   "audio": "The first time, send an article related to his industry. The second time, share a success case of another customer. The third time, ask him what challenges he's facing recently. The fourth time, offer a small suggestion. The fifth time, officially talk about your product."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:55",
+   "timestamp_end": "1:04",
+   "label": "Usage Scenarios",
+   "audio": "Three months later, he went from the bottom to the top ten percent. Seeing follow-up as a bother makes it easy to give up; seeing follow-up as a responsibility makes customers feel at ease."
+  },
+  {
+   "scene_number": 9,
+   "timestamp_start": "1:04",
+   "timestamp_end": "1:12",
+   "label": "Call to Action",
+   "audio": "I'm the speaker, taking you to understand human nature, closing high-value deals. Leave a comment 'Give up', and I'll send you a five-contact action plan table."
+  }
+ ]
+}

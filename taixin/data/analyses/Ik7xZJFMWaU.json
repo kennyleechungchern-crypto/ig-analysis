@@ -1,0 +1,35 @@
+{
+ "id": "c5468ed3-570a-48c5-b4e4-cdac0c3582cc",
+ "youtube_url": "https://www.youtube.com/watch?v=Ik7xZJFMWaU",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:07",
+   "label": "Opening Hook",
+   "audio": "Once your performance improves, your profit will be higher than others. This is the essence of the sales formula. Actually, there is no secret to my sales formula."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:07",
+   "timestamp_end": "0:16",
+   "label": "Usage Scenarios",
+   "audio": "In that sales formula, I put 'life' at the very front. Life absolutely leads to big performance. Because you will find that many salespeople whose lives are going well will have good performance, but having good performance doesn't necessarily mean life is going well."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:16",
+   "timestamp_end": "0:30",
+   "label": "Product Selling Points",
+   "audio": "So the most important thing is to start from efficiency. And follow the eight major processes. To make your list of prospects longer than others. Your closing rate will be higher than others. And your performance will naturally be better. After your performance improves, your profit will be higher. This is the essence of the sales formula."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:30",
+   "timestamp_end": "0:42",
+   "label": "Usage Scenarios",
+   "audio": "Looking from bottom to top, everything we do is for life, so life is the first element. But when we execute, we start from efficiency to do all these things. Because as long as your efficiency is better than others, you can do more things. And earn more money. Performance will be even better than others."
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "id": "c418eb13-7dba-4317-a719-00f2c0bb5c10",
+ "youtube_url": "https://www.youtube.com/watch?v=Lrt4ic5zYdc",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:02",
+   "timestamp_end": "0:17",
+   "label": "Product Selling Points",
+   "audio": "The Jews have a business bible called the Talmud. In the Talmud, it conveys an important concept: if you want to shoot a target today, even if your archery skills are poor, I tell you, if you shoot more arrows, you will definitely hit it. Do you agree?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:17",
+   "timestamp_end": "0:32",
+   "label": "Product Selling Points",
+   "audio": "If you throw ten thousand times, you'll hit it once, right? It's exactly the same as sales. So, action is the fundamental root of a salesperson. Let me give you another piece of data, okay? This will be very useful for you."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:32",
+   "timestamp_end": "0:47",
+   "label": "Product Information",
+   "audio": "Do you know that no matter how ridiculous a thing is, one-fifth of people will always believe it? Have you heard of this theory? This is science. For example, why are so many cults successful? You wonder how people can be deceived."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:47",
+   "timestamp_end": "1:02",
+   "label": "Usage Scenarios",
+   "audio": "How can drinking this medicine cure cancer? You think it's impossible, right? In your mind, you think how is it possible? Everyone, is it possible? Do they make a lot of money? Yes. Back to yourselves, if you just meet one hundred prospects, there will always be twenty customers who believe you."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "1:02",
+   "timestamp_end": "1:07",
+   "label": "Call to Action",
+   "audio": "This is probability. Regardless of how poorly you speak, tactics are not the point. If you speak randomly, twenty percent will believe you. This is science. So, do you have confidence now?"
+  }
+ ]
+}

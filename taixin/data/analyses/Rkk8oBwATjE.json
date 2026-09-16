@@ -1,0 +1,63 @@
+{
+ "id": "43e035bc-2d12-44f5-bf3b-0073532193fa",
+ "youtube_url": "https://www.youtube.com/watch?v=Rkk8oBwATjE",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:05",
+   "label": "Opening Hook",
+   "audio": "Do you often regret certain decisions? Only to find out later that you overlooked some psychological traps?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:05",
+   "timestamp_end": "0:11",
+   "label": "Usage Scenarios",
+   "audio": "It's like being lured by a limited-time offer on the street and rushing to buy things, only to realize later that you don't need them at all."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:11",
+   "timestamp_end": "0:15",
+   "label": "Problem Solving",
+   "audio": "Many mistakes are actually false appearances provided by the environment, making us take the bait voluntarily."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:15",
+   "timestamp_end": "0:23",
+   "label": "Product Information",
+   "audio": "Charlie Munger compiled the Psychology of Human Misjudgment when he was 81 years old, which was earlier than Kahneman's behavioral economics theory."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:23",
+   "timestamp_end": "0:29",
+   "label": "Product Selling Points",
+   "audio": "He used this set of thinking to avoid many major mistakes in investment decisions. Munger said, 'I'd rather gain an advantage by understanding mistakes rather than just relying on luck.'"
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:29",
+   "timestamp_end": "0:34",
+   "label": "Product Selling Points",
+   "audio": "Know yourself and the enemy, find out where the mistakes are first, only then is there room for correction."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:34",
+   "timestamp_end": "0:40",
+   "label": "Product Selling Points",
+   "audio": "When facing decisions, don't let psychological traps lead you by the nose. Reflect first to see if it's possible you've fallen into a misjudgment."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:40",
+   "timestamp_end": "0:44",
+   "label": "Call to Action",
+   "audio": "If you also want to know more about Charlie Munger's wisdom, hurry up and follow me. Bye-bye."
+  }
+ ]
+}

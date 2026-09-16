@@ -1,0 +1,56 @@
+{
+ "id": "bea180c4-3736-4661-a458-cd6394c8196c",
+ "youtube_url": "https://www.youtube.com/watch?v=NrGt_tJp74g",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:09",
+   "label": "Opening Hook",
+   "audio": "If the customer walks into the showroom and the first thing you say is, 'This car has a huge discount right now,' you've already lost half of your initiative. Because every dealer is talking about discounts. The customer doesn't not know there are discounts, he just doesn't know why he should buy from you."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:09",
+   "timestamp_end": "0:17",
+   "label": "Opening Hook",
+   "audio": "I've seen many newcomers; as soon as they see a customer come in, they rush to talk about horsepower, features, and discounts. They talk a lot, and the client only replies with one sentence: 'I'll go back and compare.' Why?"
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:18",
+   "timestamp_end": "0:29",
+   "label": "Usage Scenarios",
+   "audio": "Because you didn't connect the car with his life. You can say it like this: 'What you're looking at today isn't just a commuter car; you're actually looking for a vehicle that won't make you tired during your daily commute, can carry your family on weekends, and won't frustrate you with maintenance in the coming years, right?'"
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:30",
+   "timestamp_end": "0:38",
+   "label": "Product Selling Points",
+   "audio": "Then let's talk about the difference. This car doesn't have the highest horsepower, but fuel consumption, space, rear seat comfort, maintenance costs, and resale value combined are more friendly for someone like you who drives every day."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:39",
+   "timestamp_end": "0:48",
+   "label": "Product Information",
+   "audio": "Finally, let's talk about price comparison. You can go check out similar cars; some have low upfront prices but high maintenance costs. Some offer big discounts, but after 3 years, their residual value drops even more. What really matters isn't saving a few tens of thousands today, but the difference in total cost after three years."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:49",
+   "timestamp_end": "0:53",
+   "label": "Usage Scenarios",
+   "audio": "So the ones who actually close deals aren't those who quote the best discounts, but those best at helping customers calculate that ledger clearly."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:54",
+   "timestamp_end": "1:04",
+   "label": "Call to Action",
+   "audio": "Explain the value clearly, and the price will stand firm. I've compiled a three-year vehicle total cost comparison table. Comment 'total cost' and I'll give it to you. I'm Taixin, helping you understand human nature—a high-price closing expert."
+  }
+ ]
+}

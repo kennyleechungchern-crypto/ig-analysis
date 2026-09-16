@@ -1,0 +1,42 @@
+{
+ "id": "46437b3e-6672-4134-9d03-f68650e6c981",
+ "youtube_url": "https://www.youtube.com/watch?v=wq8hvs1E3iI",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:07",
+   "label": "Opening Hook",
+   "audio": "I want to give everyone a concept and principle that I think is very important. Because life has principles, so there is no chaos. If your heart is in chaos, it is because there are no principles."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:07",
+   "timestamp_end": "0:17",
+   "label": "Product Information",
+   "audio": "Speaking of 'persona', I'm not sure if it's suitable for everyone, but some say we need to create a persona. I haven't cared much about the word 'persona'."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:17",
+   "timestamp_end": "0:38",
+   "label": "Product Selling Points",
+   "audio": "But I think, because we want to do it for a long time, as I just mentioned, there's the compound effect. We must persist in doing one thing to see results. But if we create a persona we don't like, that isn't ourselves, then we won't persist for long. Then you won't get the final result."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:38",
+   "timestamp_end": "0:53",
+   "label": "Real Experience",
+   "audio": "So I instead recommend to everyone my own method: I truly just be myself. Because social media for me is a record of my life. I imagine when I'm 80, I show it to my grandson: 'Hey, your grandpa used to have a 6-pack.' Wouldn't that be great?"
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:53",
+   "timestamp_end": "1:11",
+   "label": "Problem Solving",
+   "audio": "So why we persist in social media is because I feel it's a record of my life. So I'm happy doing this. And I think the most important thing is doing what feels comfortable to us. With no persona, just being yourself, you won't be afraid of your world collapsing because others can't dig up anything wrong. But if we create a persona today, and this foundation isn't ourselves, it will collapse easily."
+  }
+ ]
+}

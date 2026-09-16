@@ -1,0 +1,70 @@
+{
+ "id": "17bc76b1-071a-49eb-9cc8-450af7ae1254",
+ "youtube_url": "https://www.youtube.com/watch?v=ErW1GrNxQ74",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:03",
+   "label": "Opening Hook",
+   "audio": "How can an engineer be a successful salesperson?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:03",
+   "timestamp_end": "0:07",
+   "label": "Real Experience",
+   "audio": "Back in 2012 when I first started selling cars, I couldn't find any way at all."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:07",
+   "timestamp_end": "0:16",
+   "label": "Problem Solving",
+   "audio": "Because all the seniors were teaching me sales scripts. How to use scripts to persuade customers. Yes, when you go to buy something, that sales consultant will use scripts to persuade you."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:16",
+   "timestamp_end": "0:22",
+   "label": "Problem Solving",
+   "audio": "But many people have bad experiences with sales. Overselling is also an experience we feel is not good."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:22",
+   "timestamp_end": "0:29",
+   "label": "Problem Solving",
+   "audio": "So later I felt there was a way out for me with this matter. So instead, in my later sales, I would rather speak the truth."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:29",
+   "timestamp_end": "0:38",
+   "label": "Product Selling Points",
+   "audio": "Speaking the truth, your closing rate will be lower. But you are sincere enough, you can reduce future after-sales service. Or the proportion of future complaints."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:38",
+   "timestamp_end": "0:46",
+   "label": "Product Selling Points",
+   "audio": "Low closing rate—since I know that speaking the truth will lower the closing rate. Then I must have the skills to make the closing rate higher."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:46",
+   "timestamp_end": "0:54",
+   "label": "Usage Scenarios",
+   "audio": "My thinking logic is like this, so I won't use scripts. I don't teach scripts, but I teach you how to speak. Words spoken honestly won't make you feel guilty."
+  },
+  {
+   "scene_number": 9,
+   "timestamp_start": "0:54",
+   "timestamp_end": "1:01",
+   "label": "Call to Action",
+   "audio": "If you don't believe, don't sell it, don't say it. I'd rather tell the truth, and I don't want you to lie to any customer."
+  }
+ ]
+}

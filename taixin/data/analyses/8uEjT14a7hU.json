@@ -1,0 +1,56 @@
+{
+ "id": "6561df7c-476e-418a-bad9-147af48235d4",
+ "youtube_url": "https://www.youtube.com/watch?v=8uEjT14a7hU",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:05",
+   "label": "Opening Hook",
+   "audio": "Hajidong, if I keep introducing things to a customer, but they don't have any reaction, what should I do?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:05",
+   "timestamp_end": "0:18",
+   "label": "Problem Solving",
+   "audio": "If you find that you're talking to a customer and they aren't reacting, you'll actually realize that their focus isn't on you at all. For people today, the most important thing is the ability to focus. The reason they can't focus on you is that what you're saying isn't attracting them."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:18",
+   "timestamp_end": "0:31",
+   "label": "Real Experience",
+   "audio": "You haven't left any impression in their heart at all. For example, when I used to sell probiotics, I would explain a lot about how good our bacterial strains were and how many patents we had. But I found that while I was saying these things, the customer became more and more disinterested and sleepy."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:31",
+   "timestamp_end": "0:37",
+   "label": "Product Selling Points",
+   "audio": "Use one sentence to clearly state the product's selling point. First, there should be a sense of imagery: in what scenario can they use the product?"
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:37",
+   "timestamp_end": "0:41",
+   "label": "Product Selling Points",
+   "audio": "Second, identify where they feel very uncomfortable and speak it out clearly."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:41",
+   "timestamp_end": "0:46",
+   "label": "Product Selling Points",
+   "audio": "Third, I think you should honestly state the points where you can truly help the customer, and that's enough."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:46",
+   "timestamp_end": "0:55",
+   "label": "Product Selling Points",
+   "audio": "It must be one sentence that can summarize the key points of the product. If you can find that one-sentence selling point for your product, then I believe you won't have that feeling of talking while the other person has no reaction."
+  }
+ ]
+}

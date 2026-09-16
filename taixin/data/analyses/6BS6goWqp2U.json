@@ -1,0 +1,42 @@
+{
+ "id": "20c2493a-35e1-4573-8c7b-b22210f8b414",
+ "youtube_url": "https://www.youtube.com/watch?v=6BS6goWqp2U",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:04",
+   "label": "Opening Hook",
+   "audio": "And through the Line bulk messaging system, I sold a car worth 8.9 million."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:04",
+   "timestamp_end": "0:39",
+   "label": "Product Information",
+   "audio": "Today we invited Minghui, the 2025 top sales at Youshun Used Cars. His performance grew 48% over 2024. How did he do it? He took the 'Extreme Efficiency' course to organize client data instantly. It saves a lot of my time."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:40",
+   "timestamp_end": "0:57",
+   "label": "Product Selling Points",
+   "audio": "Second is the Line bulk system. I used to spend hours messaging hundreds of clients; now it's incredibly fast. I sold an 8.9 million car this way while doing other tasks."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:57",
+   "timestamp_end": "1:09",
+   "label": "Real Experience",
+   "audio": "The 'Flow Magnet' course taught me the importance of leads. I started managing social media and connecting various platforms to make life easier."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "1:09",
+   "timestamp_end": "1:40",
+   "label": "Call to Action",
+   "audio": "It's about having more confidence. The Sales Formula course gives confidence in work and life. Confidence comes from practice and self-affirmation. Every top salesperson needs this efficiency."
+  }
+ ]
+}

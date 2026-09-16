@@ -1,0 +1,70 @@
+{
+ "id": "8a970283-9543-46be-a295-9f6d9d41baf2",
+ "youtube_url": "https://www.youtube.com/watch?v=jLbXIuGY8M4",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:09",
+   "label": "Opening Hook",
+   "audio": "Hello everyone, I am the former Porsche global top 100 sales consultant, Li Taixin. Sales strength doesn't come from nothing because you've never met Li Taixin. Thank you everyone."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:09",
+   "timestamp_end": "0:24",
+   "label": "Problem Solving",
+   "audio": "Today we teach sales. I know many of you aren't selling products and wonder why listen to Taixin. Only by adding sales skills to your expertise will you avoid being replaced by AI, right?"
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:24",
+   "timestamp_end": "0:34",
+   "label": "Usage Scenarios",
+   "audio": "So, sales are everywhere. Everyone needs it. If you're a civil servant, do you sell? You must sell for your boss to get promoted quickly."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:34",
+   "timestamp_end": "0:40",
+   "label": "Usage Scenarios",
+   "audio": "If you're a boss, do you sell? You must sell to your employees so they stay with you longer."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:40",
+   "timestamp_end": "0:50",
+   "label": "Usage Scenarios",
+   "audio": "When you're dating, do you sell? You must sell so they stay close to you. So every single person absolutely needs sales."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:50",
+   "timestamp_end": "1:02",
+   "label": "Product Information",
+   "audio": "In my ten years of sales, I noticed something very strange. I found one type of colleague whose clients are all business owners and bosses, all very dominant."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "1:02",
+   "timestamp_end": "1:14",
+   "label": "Product Information",
+   "audio": "There's a second type whose clients are all very friendly, like brothers. A third type has clients who are family-oriented, good parents, very gentle."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "1:14",
+   "timestamp_end": "1:21",
+   "label": "Product Information",
+   "audio": "And then there's a type of salesperson whose clients are all professionals like doctors, lawyers, and accountants. It's the same for them."
+  },
+  {
+   "scene_number": 9,
+   "timestamp_start": "1:21",
+   "timestamp_end": "1:31",
+   "label": "Product Information",
+   "audio": "So I thought it was strange why everyone only has one type of sales and one type of client. Later I studied and found this is called Maslow's Hammer."
+  }
+ ]
+}

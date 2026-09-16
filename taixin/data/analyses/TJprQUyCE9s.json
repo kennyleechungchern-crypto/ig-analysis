@@ -1,0 +1,49 @@
+{
+ "id": "9ad6bc13-2a43-4760-b6d3-019c833cd513",
+ "youtube_url": "https://www.youtube.com/watch?v=TJprQUyCE9s",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:08",
+   "label": "Opening Hook",
+   "audio": "Four years ago skydiving in Thailand. My right leg broke two bones. Returned to Taiwan for emergency surgery. Had steel nails and steel plates put in."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:08",
+   "timestamp_end": "0:14",
+   "label": "Problem Solving",
+   "audio": "Needed care for three months. For four years, there has always been fear of skydiving in my heart."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:18",
+   "timestamp_end": "0:30",
+   "label": "Real Experience",
+   "audio": "After 1,286 days, I have returned to the same spot. The first jump back into the sky, heart trembling, unable to forget the unease. This time there is only one goal: where you fall, you stand back up."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:31",
+   "timestamp_end": "0:40",
+   "label": "Real Experience",
+   "audio": "Someone asked me: 'Brother Tai Xin, aren't you afraid of heights?' I'm scared to death, every jump is scary."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:42",
+   "timestamp_end": "0:48",
+   "label": "Real Experience",
+   "audio": "But once you cross that hurdle, life can become clear. God will keep giving you fear until you learn to face it."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:48",
+   "timestamp_end": "0:57",
+   "label": "Real Experience",
+   "audio": "I have a very big realization. Not taking risks is the greatest risk in life."
+  }
+ ]
+}

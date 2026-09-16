@@ -1,0 +1,49 @@
+{
+ "id": "e5209c40-93a0-465a-97c2-8d34a9d5f824",
+ "youtube_url": "https://www.youtube.com/watch?v=dVSLWjow7O4",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:11",
+   "label": "Opening Hook",
+   "audio": "You will definitely attract customers who are similar to yourself, or customers you can solve for. So have you noticed that customers of each salesperson look different?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:11",
+   "timestamp_end": "0:21",
+   "label": "Product Selling Points",
+   "audio": "A company has 10 salespeople, but the customer groups of the 10 salespeople are all different. Because each business will be geared towards its customer segment. He is more likely to accept it based on his own behavior pattern."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:21",
+   "timestamp_end": "0:31",
+   "label": "Problem Solving",
+   "audio": "To capture this customer, but he may not capture them all. Look at this chart, DISC. What is the rule of pros and cons in ups and downs? If the other party is D-type, tiger-type, how should you face him, everyone knows?"
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:31",
+   "timestamp_end": "0:40",
+   "label": "Usage Scenarios",
+   "audio": "You want to become a C-type personality. You have to analyze it very clearly and in an orderly manner with him. The tiger type will believe you."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:40",
+   "timestamp_end": "0:47",
+   "label": "Real Experience",
+   "audio": "What is the easiest thing for tigers? If you have something in your belly, I will respect you. If you don't have anything in your stomach, I'll step on you. Do you understand?"
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:47",
+   "timestamp_end": "1:01",
+   "label": "Real Experience",
+   "audio": "So when facing a tiger type, you find that he is very domineering. He walks in very fiercely, looking like a big boss lady. You have to know that he is a tiger-type dominant personality. For this personality, you have to show him all the data. He will respect you. But if you let him find out you don't know anything he asks..."
+  }
+ ]
+}
