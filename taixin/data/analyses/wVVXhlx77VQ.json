@@ -1,0 +1,77 @@
+{
+ "id": "61b200a6-867a-4c66-bb64-5feaef42f59e",
+ "youtube_url": "https://www.youtube.com/watch?v=wVVXhlx77VQ",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:08",
+   "label": "Opening Hook",
+   "audio": "Customers aren't subdued by you, but asked by you. Most salespeople start introducing products as soon as they see customers, talking about advantages and throwing data. After talking for half an hour until their mouths are dry, the customer says..."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:08",
+   "timestamp_end": "0:13",
+   "label": "Opening Hook",
+   "audio": "...'Okay, let me think about it.' The problem isn't that you didn't speak well, but that you got it wrong from the start."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:13",
+   "timestamp_end": "0:26",
+   "label": "Usage Scenarios",
+   "audio": "When you go to see a doctor, the doctor sits down and tells you, 'Take this medicine, it's very effective three times a day.' Wouldn't you find it strange? You haven't even told me where you feel uncomfortable. A good doctor will definitely ask where you feel uncomfortable? For how long? What methods have you tried before? Sales is exactly the same."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:26",
+   "timestamp_end": "0:38",
+   "label": "Usage Scenarios",
+   "audio": "Scene 1: When a customer says it's too expensive, a novice salesperson says, 'Not at all, this is a great deal, everyone else has bought it.' An expert salesperson might ask: 'May I ask, what are you comparing the price to when you say it's expensive?' The customer will then voice their actual concerns themselves."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:39",
+   "timestamp_end": "0:51",
+   "label": "Usage Scenarios",
+   "audio": "Scene 2: The customer says 'I'll think about it,' the novice says: 'There won't be a discount if you don't buy now.' The expert says: 'No problem, what is the point you are most hesitant about right now? Let me see if I can help you clarify your issues.' Instead, the customer will continue chatting with you."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:52",
+   "timestamp_end": "1:02",
+   "label": "Usage Scenarios",
+   "audio": "Scene 3: When the customer has no reaction at all, the novice will continue to talk about the product. The expert asks a question: 'Have you used something similar before? How did it feel?' The customer's chatterbox opens up."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "1:03",
+   "timestamp_end": "1:14",
+   "label": "Product Selling Points",
+   "audio": "Why is asking more effective than telling? Because people only believe what they say themselves. If you tell them it's good, they'll doubt it, but if they say 'I need it,' then it's different. Sales veterans love to talk, sales experts listen, and sales masters ask."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "1:15",
+   "timestamp_end": "1:28",
+   "label": "Usage Scenarios",
+   "audio": "I used to have a student who was a real estate agent; every time he showed a house, he talked until his mouth was dry. Later, I taught him one thing: ask questions first when showing a house, don't just focus on what you're saying. What living conditions do you care about most? What were you dissatisfied with when you looked at houses before? As a result, his transaction cycle was cut in half."
+  },
+  {
+   "scene_number": 9,
+   "timestamp_start": "1:29",
+   "timestamp_end": "1:41",
+   "label": "Product Selling Points",
+   "audio": "He told me: 'Teacher, it turns out customers really tell me the answers themselves.' Because those who can talk can persuade the ears, but those who can listen can persuade the soul."
+  },
+  {
+   "scene_number": 10,
+   "timestamp_start": "1:42",
+   "timestamp_end": "1:53",
+   "label": "Call to Action",
+   "audio": "Sales is not a war to persuade the other person, but an art of cooperating with them. You don't need to learn a whole new set of sales tactics; it's enough just to ask before you speak next time you see a customer. I'm Tai Xin, I'll help you understand human nature and close high-value deals. Comment 'Ask' and I'll send you a template with three sets of sales questions."
+  }
+ ]
+}

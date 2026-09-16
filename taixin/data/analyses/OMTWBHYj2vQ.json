@@ -1,0 +1,126 @@
+{
+ "id": "5c1ec476-09e6-4156-9514-31d8a0c3dd38",
+ "youtube_url": "https://www.youtube.com/watch?v=OMTWBHYj2vQ",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:10",
+   "label": "Opening Hook",
+   "audio": "When the customer tells you, 'I know your boss, can you make it cheaper?', never say 'Then call the boss yourself.' It feels good but loses the order."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:10",
+   "timestamp_end": "0:25",
+   "label": "Usage Scenarios",
+   "audio": "I met Mr. Wang at the showroom. We discussed features and maintenance, took a test drive, and returned to the desk to view the quote."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:25",
+   "timestamp_end": "0:30",
+   "label": "Usage Scenarios",
+   "audio": "He tapped the table and said, 'Tai Xin, I actually know your boss. Can you make this price more attractive?'"
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:30",
+   "timestamp_end": "0:42",
+   "label": "Problem Solving",
+   "audio": "Every salesperson faces this. Your first thought is 'Really? Why didn't you say so before? Are you just trying to haggle with me?'"
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:42",
+   "timestamp_end": "0:48",
+   "label": "Problem Solving",
+   "audio": "If I were younger, I might say, 'Well, ask the boss then,' or 'Even if the boss comes, it is still this price.'"
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:48",
+   "timestamp_end": "0:59",
+   "label": "Problem Solving",
+   "audio": "Logically these are correct, but sales is not a debate. The more right you are, the harder it is for the client to back down."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:59",
+   "timestamp_end": "1:07",
+   "label": "Problem Solving",
+   "audio": "He mentions the boss to get respect. He wants to know if I treat him as an important person. I didn't expose him."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "1:07",
+   "timestamp_end": "1:13",
+   "label": "Problem Solving",
+   "audio": "I said: 'I understand. Since you know the boss, I absolutely cannot casually serve you. You are my VIP.'"
+  },
+  {
+   "scene_number": 9,
+   "timestamp_start": "1:13",
+   "timestamp_end": "1:26",
+   "label": "Problem Solving",
+   "audio": "He leaned in because I didn't insult him. I told him I didn't use a high-price tactic for him because he's a friend of the boss."
+  },
+  {
+   "scene_number": 10,
+   "timestamp_start": "1:26",
+   "timestamp_end": "1:35",
+   "label": "Problem Solving",
+   "audio": "The point isn't that it can't be cheaper, but that I respect you and didn't treat you like an outsider."
+  },
+  {
+   "scene_number": 11,
+   "timestamp_start": "1:35",
+   "timestamp_end": "1:45",
+   "label": "Product Selling Points",
+   "audio": "I said: 'I can't mess with price, but I'll arrange exclusive car delivery and maintenance service for you, which ordinary customers don't get.'"
+  },
+  {
+   "scene_number": 12,
+   "timestamp_start": "1:45",
+   "timestamp_end": "1:57",
+   "label": "Usage Scenarios",
+   "audio": "He asked if the price was really firm. I said if I cut it just to close, you'd worry I had more room I didn't give you."
+  },
+  {
+   "scene_number": 13,
+   "timestamp_start": "1:57",
+   "timestamp_end": "2:06",
+   "label": "Usage Scenarios",
+   "audio": "I want you to buy with peace of mind. Stable price, great service. He paused, then told me to write it down. The order closed."
+  },
+  {
+   "scene_number": 14,
+   "timestamp_start": "2:06",
+   "timestamp_end": "2:15",
+   "label": "Real Experience",
+   "audio": "No magic tricks, just one sequence: Give face first, uphold the rules, then use service to replace price cuts."
+  },
+  {
+   "scene_number": 15,
+   "timestamp_start": "2:15",
+   "timestamp_end": "2:26",
+   "label": "Problem Solving",
+   "audio": "Most fail here because they either fold or get defensive. If you fold, the quote looks dishonest. If you're hard, the client feels insulted."
+  },
+  {
+   "scene_number": 16,
+   "timestamp_start": "2:26",
+   "timestamp_end": "2:35",
+   "label": "Real Experience",
+   "audio": "True closing is: I understand your need for status, but my rules are firm. Firm stance, gentle attitude, better service."
+  },
+  {
+   "scene_number": 17,
+   "timestamp_start": "2:35",
+   "timestamp_end": "2:48",
+   "label": "Call to Action",
+   "audio": "Let the client decide with dignity. I've compiled a 'Face-Saving Closing' cheat sheet. Comment 'face' for a copy. Close high-value deals with me."
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "id": "aa089b87-832d-4da1-826f-fbe7ed9e0050",
+ "youtube_url": "https://www.youtube.com/watch?v=stDN5BH5c6c",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:01",
+   "timestamp_end": "0:08",
+   "label": "Problem Solving",
+   "audio": "Everyone knows that when a relationship is bad, but often there's no way to make up your mind to leave. How would you advise those who can't let go?"
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:08",
+   "timestamp_end": "0:13",
+   "label": "Product Selling Points",
+   "audio": "If it's about this point, it's actually about unclear principles in life. The most important thing for a person..."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:13",
+   "timestamp_end": "0:20",
+   "label": "Product Selling Points",
+   "audio": "...is will, attitude, and ability. Attitude is your principle for dealing with people, your principle for life, and your principle for work."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:20",
+   "timestamp_end": "0:24",
+   "label": "Product Selling Points",
+   "audio": "It's that you must understand your principles for choosing a partner."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:24",
+   "timestamp_end": "0:29",
+   "label": "Problem Solving",
+   "audio": "Why can't you cut ties, or why do you get tangled up? It's because your principles are not clearly set."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:29",
+   "timestamp_end": "0:35",
+   "label": "Usage Scenarios",
+   "audio": "There's a saying: life is about going through eighty-one tribulations. God is also fair; he will give you plenty of pain."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:35",
+   "timestamp_end": "0:41",
+   "label": "Usage Scenarios",
+   "audio": "For example, he gives you this pain—the pain of a breakup or the pain of a scumbag. He gives it to you once; you meet a scumbag."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:41",
+   "timestamp_end": "0:46",
+   "label": "Usage Scenarios",
+   "audio": "Suppose next time you didn't learn; he gives it to you once more. Next time you still haven't learned; he gives it to you again."
+  },
+  {
+   "scene_number": 9,
+   "timestamp_start": "0:46",
+   "timestamp_end": "0:50",
+   "label": "Usage Scenarios",
+   "audio": "Until the day you set your principles in love, God will stop this pain."
+  }
+ ]
+}
