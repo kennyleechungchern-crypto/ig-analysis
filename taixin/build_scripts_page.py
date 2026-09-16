@@ -10,7 +10,7 @@ from pathlib import Path
 
 from common import SCRIPT_DIR, load_videos
 
-SECTIONS = ["主题", "三个 Hook 备选", "口播稿", "金句", "Carousel slogan 候选", "备注"]
+SECTIONS = ["主题", "三个 Hook 备选", "口播稿", "金句", "Carousel slogan 候选", "备注", "45 秒版"]
 
 
 def parse(md: str) -> dict:
@@ -25,6 +25,9 @@ def parse(md: str) -> dict:
         key = next((s for s in SECTIONS if head.startswith(s)), head.strip())
         d["sections"][key] = {"head": head.strip(), "body": body.strip()}
     d["skip"] = "不适合 Kenny" in md and "口播稿" not in d["sections"]
+    s45 = d["sections"].get("45 秒版")
+    m = re.search(r"tag:\s*(导流|互动)", s45["head"]) if s45 else None
+    d["tag"] = m.group(1) if m else ""
     return d
 
 
@@ -37,7 +40,7 @@ def inline(s: str) -> str:
 def render_body(key: str, body: str) -> str:
     lines = [l for l in body.splitlines()]
     out = []
-    if key == "口播稿":
+    if key in ("口播稿", "45 秒版"):
         for l in lines:
             l = l.strip()
             if not l:
@@ -89,16 +92,22 @@ def main(out: str) -> None:
             )
             continue
         n_ok += 1
-        secs = "".join(
-            f'<section><h3>{html.escape(d["sections"][k]["head"] if k != "口播稿" else d["sections"][k]["head"])}</h3>{render_body(k, d["sections"][k]["body"])}</section>'
+        short = d["sections"].get("45 秒版")
+        secs = ""
+        if short:
+            secs += f'<section class="s45"><h3>45 秒版 · {html.escape(d["tag"] or "")}</h3>{render_body("45 秒版", short["body"])}</section>'
+        long_parts = "".join(
+            f'<section><h3>{html.escape(d["sections"][k]["head"])}</h3>{render_body(k, d["sections"][k]["body"])}</section>'
             for k in ["三个 Hook 备选", "口播稿", "Carousel slogan 候选", "备注"] if k in d["sections"]
         )
+        secs += f'<details class="long"><summary>长版（75 秒）· hook 备选 · slogan · 备注</summary>{long_parts}</details>' if short else long_parts
         search = html.escape(" ".join([topic, quote, d["sections"].get("三个 Hook 备选", {}).get("body", "")]))
+        tag_pill = ('<span class="pill t-' + d["tag"] + '">' + d["tag"] + '</span>') if d["tag"] else ""
         cards.append(
-            f'<article class="card" data-id="{p.stem}" data-text="{search}">'
+            f'<article class="card" data-id="{p.stem}" data-tag="{d["tag"]}" data-text="{search}">'
             f'<button class="card-head" type="button" aria-expanded="false"><span class="num">{i:02d}</span>'
             f'<span class="quote">{inline(quote)}</span><span class="chev" aria-hidden="true"></span></button>'
-            f'<p class="topic">{inline(topic)}</p>'
+            f'<p class="topic">{tag_pill}{inline(topic)}</p>'
             f'<div class="body" hidden>{secs}'
             f'<div class="actions"><button type="button" class="copy" data-target="{p.stem}">复制口播稿</button>'
             f'<a class="src" href="{html.escape(d["source"])}" target="_blank" rel="noopener">灵感来源</a></div></div>'
@@ -151,7 +160,14 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background
 .topic{margin:6px 0 0 0;color:var(--muted);font-size:14px;line-height:1.6}
 .card.skip{opacity:.7}
 .card.skip .card-head{cursor:default}
-.pill{font-size:11px;letter-spacing:.08em;padding:2px 8px;border-radius:999px;background:var(--tag);color:var(--muted)}
+.pill{font-size:11px;letter-spacing:.08em;padding:2px 8px;border-radius:999px;background:var(--tag);color:var(--muted);margin-right:6px;vertical-align:1px}
+.pill.t-导流{background:var(--gold);color:var(--gold-ink)}
+.s45 .line{font-size:17px}
+details.long{margin-top:6px;border-top:1px solid var(--rule)}
+details.long summary{cursor:pointer;font-size:13px;color:var(--muted);padding:10px 0;list-style:none}
+details.long summary::before{content:"▸ ";}
+details.long[open] summary::before{content:"▾ ";}
+details.long section:first-of-type{border-top:0}
 .body{margin-top:12px;border-top:1px dashed var(--rule);padding-top:4px}
 section{padding-block:10px}
 section+section{border-top:1px solid var(--rule)}
@@ -173,10 +189,12 @@ h3{font-size:12px;letter-spacing:.14em;color:var(--muted);font-weight:700;margin
 </style>
 <div class="wrap">
 <header class="top">
-  <div class="brand"><h1>宗臻口播稿库</h1><span class="count">{{N_OK}} 篇可用 · {{N_SKIP}} 篇不适合</span></div>
+  <div class="brand"><h1>宗臻口播稿库</h1><span class="count">{{N_OK}} 篇 · 先看 45 秒版，展开看长版</span></div>
   <div class="bar"><input id="q" type="search" placeholder="搜主题、金句、hook" autocomplete="off"></div>
   <div class="filters" role="group" aria-label="筛选">
     <button type="button" data-f="ok" aria-pressed="true" id="f-ok">可用</button>
+    <button type="button" data-f="导流" aria-pressed="false" id="f-lead">导流</button>
+    <button type="button" data-f="互动" aria-pressed="false" id="f-eng">互动</button>
     <button type="button" data-f="all" aria-pressed="false" id="f-all">全部</button>
   </div>
 </header>
@@ -189,12 +207,13 @@ h3{font-size:12px;letter-spacing:.14em;color:var(--muted);font-weight:700;margin
 (function(){
   var list=document.getElementById('list'), q=document.getElementById('q'), empty=document.getElementById('empty');
   var mode='ok';
-  try{ var m=localStorage.getItem('kenny-scripts-filter'); if(m==='all'||m==='ok') mode=m; }catch(e){}
+  try{ var m=localStorage.getItem('kenny-scripts-filter'); if(m==='all'||m==='ok'||m==='导流'||m==='互动') mode=m; }catch(e){}
   function setMode(v){ mode=v; document.querySelectorAll('.filters button').forEach(function(b){b.setAttribute('aria-pressed', b.dataset.f===v?'true':'false');}); try{localStorage.setItem('kenny-scripts-filter',v);}catch(e){} apply(); }
   function apply(){
     var t=(q.value||'').trim().toLowerCase(), shown=0;
     list.querySelectorAll('.card').forEach(function(c){
-      var ok = (mode==='all' || !c.classList.contains('skip')) && (!t || (c.dataset.text||'').toLowerCase().indexOf(t)>=0);
+      var pass = mode==='all' ? true : mode==='ok' ? !c.classList.contains('skip') : (c.dataset.tag===mode);
+      var ok = pass && (!t || (c.dataset.text||'').toLowerCase().indexOf(t)>=0);
       c.hidden=!ok; if(ok) shown++;
     });
     empty.style.display = shown?'none':'block';
@@ -205,7 +224,7 @@ h3{font-size:12px;letter-spacing:.14em;color:var(--muted);font-weight:700;margin
     var head=e.target.closest('.card-head'); 
     if(head && head.tagName==='BUTTON'){ var body=head.parentElement.querySelector('.body'); var open=head.getAttribute('aria-expanded')==='true'; head.setAttribute('aria-expanded', open?'false':'true'); body.hidden=open; return; }
     var cp=e.target.closest('.copy');
-    if(cp){ var card=cp.closest('.card'); var lines=[]; card.querySelectorAll('.line').forEach(function(p){ lines.push(p.textContent.replace(/^([0-9:–\-结尾]+)\s*/,'').trim()); });
+    if(cp){ var card=cp.closest('.card'); var lines=[]; (card.querySelector('.s45')||card).querySelectorAll('.line').forEach(function(p){ lines.push(p.textContent.replace(/^([0-9:–\-结尾]+)\s*/,'').trim()); });
       var text=lines.join('\n\n');
       var done=function(){ cp.textContent='已复制'; setTimeout(function(){cp.textContent='复制口播稿';},1500); };
       if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done, function(){ cp.textContent='复制失败，长按选取'; }); }
