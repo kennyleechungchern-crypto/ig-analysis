@@ -1,0 +1,56 @@
+{
+ "id": "db931fd6-ac5f-47d3-84f0-92302480f384",
+ "youtube_url": "https://www.youtube.com/watch?v=xBe54RtQ9No",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:03",
+   "label": "Opening Hook",
+   "audio": "Because I know that participating in food delivery is not just about those elderly people living alone, but about us."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:03",
+   "timestamp_end": "0:17",
+   "label": "Product Selling Points",
+   "audio": "Does everyone know that I go to deliver food every year? When I deliver food, there is a Good Shepherd Association in Taichung. Because they emphasize that volunteers deliver meals 365 days a year. During the New Year, volunteers have to go home for the New Year, so I go to deliver food."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:17",
+   "timestamp_end": "0:37",
+   "label": "Real Experience",
+   "audio": "And I remember my impression was very deep. The first time I went to deliver food, I went in, a dim room, a dim living room, there was a hospital bed lying in the middle of the living room. There was an old lady on it, just lying there. After seeing us come in, she got up. She used her left hand to pat the bed and said 'come sit, come sit'."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:37",
+   "timestamp_end": "0:50",
+   "label": "Real Experience",
+   "audio": "I walked closer and looked, I found her right hand was missing. Then I walked closer and looked again, I found she couldn't see out of one eye. But she was still very happy to tell us 'come sit, come sit'."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:50",
+   "timestamp_end": "1:11",
+   "label": "Real Experience",
+   "audio": "Sorry, because we have a lot of meals to deliver today, I'll come back to chat with you next time, okay? The whole house, a 3-story townhouse, was empty, and she was lying alone in the middle of the living room. During the New Year, in that dark, dim room, looking so hard, yet she could smile."
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "1:11",
+   "timestamp_end": "1:35",
+   "label": "Product Selling Points",
+   "audio": "So after these three years of food delivery, what I feel most is what? We are always giving to others, we thought it was us giving to others. But I didn't expect that after three years of food delivery, I gained the most. In the process of food delivery, I felt happiness, I felt contentment, I felt satisfaction. Everyone, we all want to get love, our hearts are lacking love."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "1:35",
+   "timestamp_end": "1:46",
+   "label": "Call to Action",
+   "audio": "But only by giving can we have love. We only have love when we give to the elderly living alone, and only then will we have the love of our customers. Only when we give to our partners will we get the love of our partners."
+  }
+ ]
+}

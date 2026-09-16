@@ -8,6 +8,7 @@ taixin/
 ├── sources.json          # 抓哪些频道
 ├── list_videos.py        # ① 列出所有短视频 → data/videos.json（按播放量排序）
 ├── transcribe.py         # ② 下载音频 + faster-whisper → transcripts/<id>.md + data/transcripts.jsonl
+├── ingest_analysis.py    # ②b 云端抓不到音频时：把 Higgsfield 视频分析结果落成逐字稿（见下）
 ├── write_scripts.py      # ③ 逐字稿 → Kenny 口播稿（Claude）→ scripts/<id>.md + scripts/INDEX.md
 ├── prompts/kenny_voice.md# Kenny 的声音 / 结构 / 原创红线（③ 的 system prompt，改这里调风格）
 ├── data/                 # 视频清单 + 逐字稿 jsonl
@@ -45,6 +46,14 @@ YouTube 对数据中心 IP 会要求「登录确认不是机器人」或直接 4
 进阶：跑一个 [bgutil PO token 服务](https://github.com/Brainicism/bgutil-ytdlp-pot-provider)
 （`pip install bgutil-ytdlp-pot-provider` + `node server/build/main.js`），然后
 `export TAIXIN_POT_SERVER=http://127.0.0.1:4416`。能解 403，但解不了「登录确认」。
+
+## 云端替代路：Higgsfield 视频分析（本次首批 29 条就是这样来的）
+
+在 Claude Code 里，Higgsfield MCP 的 `video_analysis_create(youtube_url)` 能在服务端直接吃 YouTube
+链接（免费额度也能跑，每条约 1–2 分钟），返回逐场景的口播内容——注意是**英文转述**，不是中文逐字。
+把返回的 scenes 存成 `data/analyses/<video_id>.json`（只要 audio / label / timestamp 三个字段），
+然后 `python ingest_analysis.py` 落成 `transcripts/<id>.md`。纯音乐、无口播的片子把 status 写成
+`skipped`。写口播稿只需要主题和洞察，英文转述已经够用；要中文逐字稿再走本机 yt-dlp + whisper。
 
 ## 转写质量
 

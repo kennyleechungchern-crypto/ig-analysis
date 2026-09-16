@@ -1,0 +1,42 @@
+{
+ "id": "97675f8c-3326-416f-b20b-fb024b3afb2e",
+ "youtube_url": "https://www.youtube.com/watch?v=1teh0CvwCzA",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:03",
+   "label": "Opening Hook",
+   "audio": "Voiceover: The end goal for all single people is definitely to become an athlete."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:04",
+   "timestamp_end": "0:07",
+   "label": "Usage Scenarios",
+   "audio": "All my single friends around me, they seem to be preparing for the Olympics."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:07",
+   "timestamp_end": "0:14",
+   "label": "Usage Scenarios",
+   "audio": "Every day they have their own training projects. Badminton, table tennis, tennis, swimming, fitness, rock climbing, mountain climbing."
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:14",
+   "timestamp_end": "0:21",
+   "label": "Usage Scenarios",
+   "audio": "In short, when you want to ask them out, you can never reach them, because they are all training. If you say, let's go eat, they say they are losing weight or body fat."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:22",
+   "timestamp_end": "0:31",
+   "label": "Usage Scenarios",
+   "audio": "Anyway, this is also pretty good. Fitness, single life, self-improvement. These people have no desire to procreate in their heads, all they pursue is living to a hundred years old."
+  }
+ ]
+}

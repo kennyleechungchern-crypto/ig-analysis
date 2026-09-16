@@ -1,0 +1,84 @@
+{
+ "id": "fb3feb23-42bc-4fff-8401-972b631959c5",
+ "youtube_url": "https://www.youtube.com/watch?v=Gg4VAB4d6hM",
+ "status": "completed",
+ "scenes": [
+  {
+   "scene_number": 1,
+   "timestamp_start": "0:00",
+   "timestamp_end": "0:02",
+   "label": "Opening Hook",
+   "audio": "You sent three messages to the customer, but he didn't reply to any of them."
+  },
+  {
+   "scene_number": 2,
+   "timestamp_start": "0:02",
+   "timestamp_end": "0:05",
+   "label": "Problem Solving",
+   "audio": "Do you think he doesn't want to buy anymore? No, it's your message that makes him not want to reply to you."
+  },
+  {
+   "scene_number": 3,
+   "timestamp_start": "0:05",
+   "timestamp_end": "0:08",
+   "label": "Product Selling Points",
+   "audio": "What kind of messages are you sending? Have you considered the last proposal? Or is there a recent promotion I want to share with you?"
+  },
+  {
+   "scene_number": 4,
+   "timestamp_start": "0:08",
+   "timestamp_end": "0:12",
+   "label": "Usage Scenarios",
+   "audio": "Translated into plain language, it's just one sentence: Do you want to buy it or not? The customer knows that as soon as he replies to you, you will start selling."
+  },
+  {
+   "scene_number": 5,
+   "timestamp_start": "0:12",
+   "timestamp_end": "0:15",
+   "label": "Product Information",
+   "audio": "So the safest way is to not read or reply. Do you know how top sales people follow up?"
+  },
+  {
+   "scene_number": 6,
+   "timestamp_start": "0:15",
+   "timestamp_end": "0:21",
+   "label": "Product Information",
+   "audio": "In their follow-ups, 80% is unrelated to business. A good article share, a greeting, a piece of sincere concern."
+  },
+  {
+   "scene_number": 7,
+   "timestamp_start": "0:21",
+   "timestamp_end": "0:27",
+   "label": "Product Information",
+   "audio": "Psychology calls this the mere exposure effect. When someone is more familiar with you, they are more likely to have a good impression of you."
+  },
+  {
+   "scene_number": 8,
+   "timestamp_start": "0:27",
+   "timestamp_end": "0:30",
+   "label": "Product Information",
+   "audio": "You don't need to do anything special, you just need to keep appearing in his world, but without giving pressure."
+  },
+  {
+   "scene_number": 9,
+   "timestamp_start": "0:30",
+   "timestamp_end": "0:36",
+   "label": "Real Experience",
+   "audio": "Data shows that 80% of transactions occur in the fifth to twelfth contact. If you give up at the third time, you will lose 80% of your performance."
+  },
+  {
+   "scene_number": 10,
+   "timestamp_start": "0:36",
+   "timestamp_end": "0:39",
+   "label": "Product Selling Points",
+   "audio": "So what is the top-level sales? It's that you feel I am always by your side, yet I am not there."
+  },
+  {
+   "scene_number": 11,
+   "timestamp_start": "0:39",
+   "timestamp_end": "0:47",
+   "label": "Call to Action",
+   "audio": "Leave a comment with the words 'follow-up', and I will private message you the complete SOP. Change selling to concern, change pressure to value. I am your guide, leading you to understand human nature and close high-value deals."
+  }
+ ]
+}
